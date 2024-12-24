@@ -2,13 +2,17 @@
 {% load static %}
 
 {% block title %}
-<!-- you write here title of page -->
+    <!-- you write here title of page -->
 {% endblock %}
 
 {% block links %}
-<!-- you can write anything which you can write in head element -->
+    <!-- you can write anything which you can write in head element -->
+    <link rel="stylesheet" href="{% static 'css/infopage.css' %}">
 {% endblock %}
 
 {% block body %}
-<!-- you can write anything which you can write in body element -->
+    <!-- you can write anything which you can write in body element -->
+
+
+    <script src="{% static 'js/infopage.js' %}"></script>
 {% endblock %}
