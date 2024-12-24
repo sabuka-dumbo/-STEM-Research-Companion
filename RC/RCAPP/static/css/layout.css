@@ -1,3 +1,29 @@
-.body {
-    background-color: cadetblue;
+.big-font {
+    font-family: "Itim";
+    font-size: 25px;
+}
+
+.bigger-font {
+    font-family: "Itim";
+    font-size: 27px;
+}
+
+.huge-font {
+    font-family: "Itim";
+    font-size: 30px;
+}
+
+.medium-font {
+    font-family: "Itim";
+    font-size: 20px;
+}
+
+.small-font {
+    font-family: "Itim";
+    font-size: 18px;
+}
+
+.smaller-font {
+    font-family: "Itim";
+    font-size: 15px;
 }
