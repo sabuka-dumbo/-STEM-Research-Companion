@@ -77,20 +77,20 @@
     height: max-content;
     padding-left: 20px;
     padding-right: 20px;
-    display: inline-block;
+    display: none;
 }
 
 .burger-span {
     position: relative;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 40px;
-    height: 10px;
+    height: 8px;
     background-color: black;
     display: block;
     margin: 0;
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2.5px;
 }
 
 @media screen and (max-width: 1040px) {
@@ -128,5 +128,9 @@
 
     .navbar-profile {
         display: none;
+    }
+
+    .burger-menu {
+        display: inline-block;
     }
 }
