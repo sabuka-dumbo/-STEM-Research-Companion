@@ -134,3 +134,10 @@
         display: inline-block;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .navbar-title {
+        width: 90%;
+        font-size: 18px;
+    }
+}
