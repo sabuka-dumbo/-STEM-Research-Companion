@@ -217,3 +217,13 @@
         rotate: 0deg;
     }
 }
+
+@keyframes burger_nav {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
