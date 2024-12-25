@@ -218,12 +218,21 @@
     }
 }
 
-@keyframes burger_nav {
+@keyframes burger_nav_open {
     0% {
         left: -100%;
     }
 
     100% {
         left: 0px;
+    }
+}
+@keyframes burger_nav_close {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -100%;
     }
 }
