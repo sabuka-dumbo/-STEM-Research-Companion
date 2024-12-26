@@ -10,7 +10,9 @@ let is_cooldown = false;
 burger_menu.addEventListener("click", function() {
     if (is_cooldown == false) {
         is_cooldown = true;
+
         if (is_open == false) {
+            console.log("start")
             burger_nav.style.animation = "burger_nav_open ease 1s";
             burger_span1.style.animation = "span1_open ease 1s";
             burger_span2.style.animation = "span2_open ease 1s";
@@ -29,6 +31,7 @@ burger_menu.addEventListener("click", function() {
                 burger_span3.style.rotate = "-45deg";
 
                 is_open = true;
+                console.log("s")
                 is_cooldown = false;
             })
         } else {
