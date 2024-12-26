@@ -91,6 +91,16 @@
     margin-bottom: 2.5px;
 }
 
+.burger-nav {
+    position: fixed;
+    left: -100%;
+    z-index: 100;
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+}
+
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;
@@ -160,7 +170,7 @@
     0% {}
 
     100% {
-        top: 10px;
+        top: 20px;
         rotate: 45deg;
     }
 }
@@ -177,19 +187,19 @@
     0% {}
 
     100% {
-        top: -10px;
+        top: 0px;
         rotate: -45deg;
     }
 }
 
 @keyframes span1_close {
     0% {
-        top: 10px;
+        top: 20px;
         rotate: 45deg;
     }
 
     100% {
-        top: 0px;
+        top: 10px;
         rotate: 0deg;
     }
 }
@@ -197,22 +207,23 @@
 @keyframes span2_close {
     0% {
         opacity: 0;
+        top: 10px;
     }
 
     100% {
         opacity: 1;
-        top: 0;
+        top: 10px;
     }
 }
 
 @keyframes span3_close {
     0% {
-        top: -10px;
+        top: 0px;
         rotate: -45deg;
     }
 
     100% {
-        top: 0px;
+        top: 10px;
         rotate: 0deg;
     }
 }

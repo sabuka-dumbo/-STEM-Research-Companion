@@ -23,11 +23,12 @@ burger_menu.addEventListener("click", function() {
                 burger_span2.style.animation = '';
                 burger_span3.style.animation = '';
 
-                burger_span1.style.top = "10px";
+                burger_span1.style.top = "20px";
                 burger_span1.style.rotate = "45deg";
                 burger_span2.style.opacity = "0";
-                burger_span3.style.top = "-10px";
+                burger_span3.style.top = "0px";
                 burger_span3.style.rotate = "-45deg";
+                burger_nav.style.left = "0px";
 
                 is_open = true;
                 is_cooldown = false;
@@ -47,9 +48,11 @@ burger_menu.addEventListener("click", function() {
                 burger_span1.style.top = "10px";
                 burger_span1.style.rotate = "0deg";
                 burger_span2.style.opacity = "1";
-                burger_span2.style.top = "0px";
-                burger_span3.style.top = "0px";
+                burger_span2.style.top = "10px";
+                burger_span3.style.top = "10px";
                 burger_span3.style.rotate = "0deg";
+                burger_nav.style.left = "-100%";
+
                 is_open = false;
                 is_cooldown = false;
             })
