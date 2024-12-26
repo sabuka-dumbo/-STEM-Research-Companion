@@ -47,8 +47,11 @@ burger_menu.addEventListener("click", function() {
                 burger_span1.style.top = "0px";
                 burger_span1.style.rotate = "0deg";
                 burger_span2.style.opacity = "1";
+                burger_span2.style.top = "0px";
                 burger_span3.style.top = "0px";
                 burger_span3.style.rotate = "0deg";
+                is_open = false;
+                is_cooldown = false;
             })
         }
     }
