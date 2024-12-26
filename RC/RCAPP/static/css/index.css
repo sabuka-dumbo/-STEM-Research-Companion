@@ -76,6 +76,7 @@
     width: 30px;
     height: max-content;
     display: none;
+    z-index: 101;
 }
 
 .burger-span {
