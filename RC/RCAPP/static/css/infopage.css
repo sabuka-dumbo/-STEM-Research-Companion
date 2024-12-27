@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(61, 59, 59, 0.379), rgba(0,0,0,0.75)), url(#);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: auto;
+    cursor: pointer;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    font-family: 'Itim', sans-serif;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul li:first-child::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.register-btn{
+    background-color: rgb(42, 48, 225);
+    padding: 10px;
+    border-radius: 40px 0 40px 0;
+}
+.register-btn:hover{
+    background-color: rgb(82, 82, 242);
+}
+
+.text-box{
+    margin-left: 5vw;
+    width: auto;
+}
+.text-box h1{
+    font-size: 3.5em;
+    font-family: 'Itim', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-top: 10vh;
+}
+.text-box p{
+    font-size: 2em;
+    font-family: 'Itim', sans-serif;
+    color: white;
+    margin-top: 5vh;
+    width: 50%;
+}
+
+.hero-btn{
+    margin-top: 10vh;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 1em;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #10ecb8;
+    background: #10ecb8;
+    transition: 1s;
+}
