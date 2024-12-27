@@ -13,18 +13,23 @@
 {% block body %}
     <!-- you can write anything which you can write in body element -->
     <div class="main">
-        <div class="navbar">
+        <nav class="navbar">
             <div class="icon">
-                <div>Research Companion</div>
-            </div>
+                <div class="logo">Research Companion</div>
+            </div> 
             <div class="menu">
                 <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register Now</a></li>
+                    <li><a href="#" class="login-btn" >Login</a></li>
+                    <li><a href="#"class="register-btn">Register Now</a></li>
                 </ul>
-            </div>
+            </div>   
+        </nav>
+        <br>
+        <div class="text-box">
+            <h1>Unlock the future with us!</h1>
+            <p>Join Us and Make a Difference in the world of STEM</p>
+            <a href="#" class="hero-btn">Visit us to know more</a>
         </div>
-        <div></div>
     </div>
 
     <script src="{% static 'js/infopage.js' %}"></script>
