@@ -366,25 +366,7 @@
     background-color: black;
     color: white;
 }
-/*
-@media screen and (max-width: 1260px) {
-    .mp-card-left {
-        width: 300px;
-        margin-right: 0;
-    }
 
-    .mp-card-middle {
-        width: 300px;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-    .mp-card-right {
-        margin-left: 0;
-        width: 300px;
-    }
-}
-*/
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;
@@ -392,6 +374,10 @@
     
     .navbar-links {
         width: calc(100% - 60% + 20px);
+    }
+
+    .cards-section {
+        grid-template-columns: 32.3% 1.5% 32.3 1.5% 32.3%;
     }
 }
 
