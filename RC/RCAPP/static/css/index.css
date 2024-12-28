@@ -252,7 +252,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: fill;
+    width: 100%;
     height: 320px;
     background-color: aliceblue;
     margin-top: 20px;
@@ -268,12 +268,10 @@
     position: relative;
     top: 0;
     left: 0;
-    width: fill;
+    width: 100%;
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
-    margin-right: 15px;
-    margin-left: 15px;
     margin-top: 20px;
     border-radius: 10px;
     grid-row-start: 1;
@@ -286,12 +284,10 @@
     position: relative;
     top: 0;
     left: 0;
-    width: fill;
+    width: 100%;
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
-    margin-right: 0;
-    margin-left: 15px;
     margin-top: 20px;
     border-radius: 10px;
     grid-row-start: 1;
