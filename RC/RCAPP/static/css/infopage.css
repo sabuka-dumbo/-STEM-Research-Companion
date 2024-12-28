@@ -74,7 +74,7 @@ html, body{
     width: auto;
 }
 .text-box h1{
-    font-size: 3.5em;
+    font-size: 3em;
     font-family: 'Itim', sans-serif;
     color: white;
     font-weight: bold;
@@ -85,7 +85,7 @@ html, body{
     font-family: 'Itim', sans-serif;
     color: white;
     margin-top: 5vh;
-    width: 70%;
+    width: 90%;
 }
 
 .hero-btn{
