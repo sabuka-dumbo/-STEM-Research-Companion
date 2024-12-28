@@ -85,7 +85,7 @@ html, body{
     font-family: 'Itim', sans-serif;
     color: white;
     margin-top: 5vh;
-    width: auto;
+    width: 80%;
 }
 
 .hero-btn{
@@ -114,6 +114,16 @@ html, body{
     width: 40%;
     height: 40%;
 }
+.empty{
+    background-color: white;
+    height: 50vh;
+    width
+    a
+}
+
+
+
+
 
 @media (max-width: 730px){
     .navbar{
