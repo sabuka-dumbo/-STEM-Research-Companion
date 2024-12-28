@@ -20,6 +20,7 @@
     height: max-content;
     padding-left: 20px;
     padding-right: 20px;
+    z-index: 1001;
     display: inline-block;
 }
 
@@ -95,11 +96,43 @@
 .burger-nav {
     position: fixed;
     left: -100%;
+    top: 0;
     z-index: 100;
-    background-color: aqua;
+    background-color: #D9D9D9;
     width: 100vw;
     height: 100vh;
     overflow: none;
+}
+
+.burger-nav-items {
+    position: relative;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+}
+
+.burger-nav-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: max-content;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.burgerbar-profile-icon {
+    position: relative;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.burger-nav-profile {
+    position: absolute;
+    bottom: 10%;
 }
 
 @media screen and (max-width: 1040px) {
