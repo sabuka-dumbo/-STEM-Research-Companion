@@ -36,4 +36,12 @@ class Project(models.Model):
     project_members = models.ManyToManyField(User, related_name="project_members")
     invite_out_request = models.ManyToManyField(User, related_name="people_who_we_invite")
     invite_in_request = models.ManyToManyField(User, related_name="people_who_wants_to_join")
+    secret_code = models.IntegerField()
+    secret_code_2 = models.IntegerField()
+    secret_code_3 = models.IntegerField()
+    secret_code_for_owners = models.IntegerField()
+    view_count = models.ManyToManyField(User, related_name="view_count")
+    like_count = models.ManyToManyField(User, related_name="like_count")
+    dislike_count = models.ManyToManyField(User, related_name="dislike_count")
+    favorite_count = models.ManyToManyField(User, related_name="favorite_count")
     
