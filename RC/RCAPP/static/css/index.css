@@ -230,6 +230,8 @@
     left: 0;
     width: 90%;
     margin-left: 5%;
+    display: grid;
+    grid-template-columns: 30% 5% 30% 5% 30%;
 }
 
 .mp-card {
@@ -254,10 +256,9 @@
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
-    margin-right: 15px;
-    margin-left: 0px;
     margin-top: 20px;
     border-radius: 10px;
+    grid-row-start: 1;
 }
 
 .mp-card-middle {
@@ -354,7 +355,7 @@
     background-color: black;
     color: white;
 }
-
+/*
 @media screen and (max-width: 1260px) {
     .mp-card-left {
         width: 300px;
@@ -372,7 +373,7 @@
         width: 300px;
     }
 }
-
+*/
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;

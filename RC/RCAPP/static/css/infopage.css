@@ -119,8 +119,20 @@ html, body{
     height: 30vh;
     width: 100%;
 }
-
-
+.about-title{
+    font-size: 3em;
+    font-family: 'Itim', sans-serif;
+    color: black;
+    margin-left: 5vw;
+}
+.about-textbox{
+    margin-left: 5vw;
+}
+.choose-title{
+    font-size: 2em;
+    font-family: 'Itim', sans-serif;
+    color: black;
+}
 
 
 
