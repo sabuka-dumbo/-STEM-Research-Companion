@@ -225,9 +225,8 @@
 .cards-section {
     position: relative;
     top: 0;
-    left: 0;
+    left: calc((100% - 1200px) / 2);
     width: 1200px;
-    margin-left: calc((100% - 1200px) / 2);
 }
 
 .mp-card {
