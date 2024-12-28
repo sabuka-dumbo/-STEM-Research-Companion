@@ -149,7 +149,7 @@
     background-color: aqua;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 0px;
     padding: 20px;
     box-sizing: border-box;
 }
