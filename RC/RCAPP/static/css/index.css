@@ -440,7 +440,13 @@
 }
 
 @media screen and (max-width: 694px) {
-    #fc #fc6, #fc7 {
+    #fc7 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    #fc5, #fc6, #fc7 {
         display: none;
     }
 }
