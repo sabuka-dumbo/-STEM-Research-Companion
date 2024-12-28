@@ -363,6 +363,11 @@
     color: white;
 }
 
+.mp-button:hover {
+    animation: button_color 0.5s ease;
+    background-color: grey;
+}
+
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;
@@ -618,6 +623,7 @@
         left: 0px;
     }
 }
+
 @keyframes burger_nav_close {
     0% {
         left: 0px;
@@ -652,4 +658,14 @@
         padding-right: 20px;
         display: inline-block;
     } 
+}
+
+@keyframes button_color {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: grey;
+    }
 }
