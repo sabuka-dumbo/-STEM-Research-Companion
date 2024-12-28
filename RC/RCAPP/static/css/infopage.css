@@ -144,7 +144,13 @@ html, body{
     align-items: center;
     width: 80%;
 }
-
+.cards-container{
+    display: flex;
+    flex-direction: column;
+}
+#card{
+    
+}
 
 
 

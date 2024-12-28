@@ -497,6 +497,14 @@
         top: -10px;
         padding-right: 0;
     }
+
+    .mp-title {
+        font-size: 20px;
+    }
+
+    .mp-see-more {
+        top: -5px;
+    }
 }
 
 @keyframes span1_open {
