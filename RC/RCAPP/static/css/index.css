@@ -226,18 +226,19 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 1200px;
+    margin-left: calc((100% - 1200px) / 2);
 }
 
 .mp-card {
     position: relative;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 100px;
+    width: 350px;
+    height: 80px;
+    display: inline-block;
     background-color: aliceblue;
+    margin-right: 10px;
 }
 
 

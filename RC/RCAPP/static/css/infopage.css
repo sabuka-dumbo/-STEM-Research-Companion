@@ -85,7 +85,7 @@ html, body{
     font-family: 'Itim', sans-serif;
     color: white;
     margin-top: 5vh;
-    width: 90%;
+    width: auto;
 }
 
 .hero-btn{
