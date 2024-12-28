@@ -115,7 +115,7 @@ html, body{
     height: 40%;
 }
 .empty{
-    background-color: white;
+    background-color: rgb(255, 235, 191);
     height: 30vh;
     width: 100%;
 }

@@ -246,6 +246,48 @@
     border-radius: 10px;
 }
 
+.mp-card-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 320px;
+    display: inline-block;
+    background-color: aliceblue;
+    margin-right: 15px;
+    margin-left: 0px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mp-card-middle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 320px;
+    display: inline-block;
+    background-color: aliceblue;
+    margin-right: 15px;
+    margin-left: 5%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mp-card-right {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 320px;
+    display: inline-block;
+    background-color: aliceblue;
+    margin-right: 15px;
+    margin-left: 5%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
 .mp-card-image {
     position: absolute;
     top: 0px;
