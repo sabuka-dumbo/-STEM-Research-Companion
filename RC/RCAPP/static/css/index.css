@@ -142,14 +142,13 @@
     top: 0;
     left: 0;
     width: 90%;
-    height: 90px;
     margin-top: 150px;
     margin-left: 5%;
     margin-right: 5%;
     background-color: aqua;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -160,10 +159,32 @@
     border-radius: 8px;
     text-align: center;
     padding: 10px;
-    font-size: 16px;
-    height: 60px;
-    width: 65px;
-  }
+    font-size: 14px;
+    height: 80px;
+    width: auto;
+}
+
+.function-card-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.function-card-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
 
 @media screen and (max-width: 1040px) {
     .navbar-title {
