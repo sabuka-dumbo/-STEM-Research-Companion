@@ -10,6 +10,7 @@
     padding-right: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+    z-index: 5;
 }
 
 .navbar-title {
@@ -247,12 +248,13 @@
 
 .mp-card-image {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 80%;
     height: 150px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 10px;
 }
 
 .mp-card-title {
@@ -261,7 +263,7 @@
     left: 0;
     width: 80%;
     height: 10px;
-    margin-top: 160px;
+    margin-top: 170px;
     margin-left: 10%;
     margin-right: 10%;    
 }
@@ -272,7 +274,7 @@
     left: 0;
     width: 80%;
     height: 10px;
-    margin-top: 190px;
+    margin-top: 200px;
     margin-left: 10%;
     margin-right: 10%;  
     color: gray;  
@@ -284,7 +286,7 @@
     left: 0;
     width: 80%;
     height: 50px;
-    margin-top: 210px;
+    margin-top: 220px;
     margin-left: 10%;
     margin-right: 10%;  
     color: rgb(71, 71, 71);  
@@ -300,6 +302,7 @@
     height: max-content;
     padding: 0;
     margin: 0;
+    margin-top: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
