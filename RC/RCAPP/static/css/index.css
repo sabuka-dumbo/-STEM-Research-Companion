@@ -154,6 +154,15 @@
     box-sizing: border-box;
 }
 
+.function-card {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+  }
+
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;
