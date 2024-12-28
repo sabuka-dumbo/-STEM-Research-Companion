@@ -207,7 +207,7 @@
 
 .mp-see-more {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0px;
     width: max-content;
     color: #3E9ACD;
@@ -503,7 +503,7 @@
     }
 
     .mp-see-more {
-        top: -5px;
+        top: -10px;
     }
 }
 
