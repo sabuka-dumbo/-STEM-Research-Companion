@@ -148,7 +148,7 @@ html, body{
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
-    gap: 10px;
+    gap: 3px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
