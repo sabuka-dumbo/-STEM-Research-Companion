@@ -137,6 +137,17 @@
     margin-bottom: 10%;
 }
 
+.functions_div {
+    position: relative;
+    top: 150px;
+    left: 0;
+    width: 90%;
+    height: 90px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: aqua;
+}
+
 @media screen and (max-width: 1040px) {
     .navbar-title {
         width: 35%;
