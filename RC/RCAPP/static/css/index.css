@@ -439,15 +439,31 @@
     }
 }
 
-@media screen and (max-width: 694px) {
+@media screen and (max-width: 1194px) {
     #fc7 {
         display: none;
     }
 }
 
-@media screen and (max-width: 694px) {
-    #fc5, #fc6, #fc7 {
+@media screen and (max-width: 1026px) {
+    #fc7, #fc6 {
         display: none;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #fc7, #fc6, #fc5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    #fc7, #fc6 {
+        display: none;
+    }
+
+    #fc5, #fc6 {
+        display: block;
     }
 }
 
