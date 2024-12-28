@@ -358,15 +358,17 @@
 @media screen and (max-width: 1260px) {
     .mp-card-left {
         width: 300px;
+        margin-right: 0;
     }
 
     .mp-card-middle {
         width: 300px;
-        margin-left: 8%;
-        margin-right: 8%;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .mp-card-right {
+        margin-left: 0;
         width: 300px;
     }
 }
