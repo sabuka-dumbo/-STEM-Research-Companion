@@ -44,4 +44,6 @@ class Project(models.Model):
     like_count = models.ManyToManyField(User, related_name="like_count")
     dislike_count = models.ManyToManyField(User, related_name="dislike_count")
     favorite_count = models.ManyToManyField(User, related_name="favorite_count")
-    
+
+    def __str__(self):
+        return "${self.project_name}"
