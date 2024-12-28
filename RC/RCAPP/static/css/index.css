@@ -228,8 +228,8 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 1150px;
-    margin-left: calc((100% - 1150px) / 2);
+    width: 80%;
+    margin-left: 5%;
 }
 
 .mp-card {
@@ -269,7 +269,7 @@
     display: inline-block;
     background-color: aliceblue;
     margin-right: 15px;
-    margin-left: 5%;
+    margin-left: 15px;
     margin-top: 20px;
     border-radius: 10px;
 }
@@ -282,8 +282,8 @@
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
-    margin-right: 15px;
-    margin-left: 5%;
+    margin-right: 0;
+    margin-left: 15px;
     margin-top: 20px;
     border-radius: 10px;
 }
