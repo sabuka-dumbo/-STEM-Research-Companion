@@ -628,7 +628,7 @@
     }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1700px) and (min-width: 1200px) {
     .navbar-links {
         position: relative;
         top: 0;
@@ -641,7 +641,7 @@
     } 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 900px) {
     .navbar-links {
         position: relative;
         top: 0;
