@@ -163,6 +163,7 @@
     height: 80px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.386);
     width: auto;
+    cursor: pointer;
 }
 
 .function-card-icon {
@@ -183,7 +184,42 @@
     padding: 0;
     margin-left: 5%;
     margin-right: 5%;
-    
+}
+
+.my-projects {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+}
+
+.mp-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: max-content;
+    margin-left: 5%;    
+}
+
+.mp-see-more {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: max-content;
+    color: #3E9ACD;
+    margin-right: 5%;
+}
+
+.mp-line {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px solid black;
 }
 
 
