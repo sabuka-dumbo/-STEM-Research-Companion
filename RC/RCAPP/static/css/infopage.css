@@ -123,21 +123,28 @@ html, body{
     font-size: 3em;
     font-family: 'Itim', sans-serif;
     color: black;
-    margin-left: 5vw;
+    margin-left: 3vw;
 }
 .about-textbox{
-    margin-left: 5vw;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
 }
 .choose-title{
     font-size: 2em;
     font-family: 'Itim', sans-serif;
     color: black;
+    text-align: center;
 }
 .about-text{
     font-size: 1em;
     color: black;
     font-family: 'Itim', sans-serif;
+    text-align: center;
+    align-items: center;
+    width: 80%;
 }
+
 
 
 

@@ -415,6 +415,34 @@
     .burger-nav {
         display: block;
     }
+
+    .cards-section {
+        grid-template-columns: 45% 10% 45%;
+    }
+
+    .mp-card-left {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .mp-card-middle {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+
+    .mp-card-right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards-section {
+        grid-template-columns: 47.5% 5% 47.5%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -429,6 +457,33 @@
 
     .functions_div {
         margin-top: 135px;
+    }
+
+    .cards-section {
+        grid-template-columns: 100%;
+        grid-template-rows: 320px 20px 320px 20px 320px;
+    }
+
+    .mp-card-left {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .mp-card-middle {
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .mp-card-right {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        display: block;
     }
 }
 
