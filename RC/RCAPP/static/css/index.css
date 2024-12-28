@@ -147,10 +147,11 @@
     margin-right: 5%;
     background-color: aqua;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .function-card {
