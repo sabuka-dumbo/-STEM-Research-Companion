@@ -106,9 +106,10 @@
 
 .burger-nav-items {
     position: relative;
-    top: 10%;
+    top: 100px;
     left: 0;
     width: 100%;
+    overflow: auto;
     height: 90%;
 }
 
@@ -131,8 +132,9 @@
 }
 
 .burger-nav-profile {
-    position: absolute;
-    bottom: 10%;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 @media screen and (max-width: 1040px) {
