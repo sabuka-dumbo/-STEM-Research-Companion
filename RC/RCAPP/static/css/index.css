@@ -252,7 +252,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 350px;
+    width: fill;
     height: 320px;
     background-color: aliceblue;
     margin-top: 20px;
@@ -268,7 +268,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 350px;
+    width: fill;
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
@@ -286,7 +286,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 350px;
+    width: fill;
     height: 320px;
     display: inline-block;
     background-color: aliceblue;
