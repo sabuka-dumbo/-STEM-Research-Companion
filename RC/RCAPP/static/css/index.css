@@ -102,6 +102,7 @@
     width: 100vw;
     height: 100vh;
     overflow: none;
+    display: none;
 }
 
 .burger-nav-items {
@@ -235,12 +236,78 @@
     top: 0;
     left: 0;
     width: 350px;
-    height: 250px;
+    height: 320px;
     display: inline-block;
     background-color: aliceblue;
     margin-right: 15px;
     margin-left: 15px;
-    margin-top: 90px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mp-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 150px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.mp-card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 10px;
+    margin-top: 160px;
+    margin-left: 10%;
+    margin-right: 10%;    
+}
+
+.mp-card-author {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 10px;
+    margin-top: 190px;
+    margin-left: 10%;
+    margin-right: 10%;  
+    color: gray;  
+}
+
+.mp-card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 50px;
+    margin-top: 210px;
+    margin-left: 10%;
+    margin-right: 10%;  
+    color: rgb(71, 71, 71);  
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.mp-button {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
 }
 
 
@@ -287,6 +354,10 @@
 
     .burger-menu {
         display: inline-block;
+    }
+
+    .burger-nav {
+        display: block;
     }
 }
 
