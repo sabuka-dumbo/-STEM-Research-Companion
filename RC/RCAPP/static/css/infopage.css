@@ -145,8 +145,10 @@ html, body{
     width: 80%;
 }
 .cards-container{
-    display: grid;
-    grid-template-columns: repeat(2);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #card{
     border: 1px solid black;

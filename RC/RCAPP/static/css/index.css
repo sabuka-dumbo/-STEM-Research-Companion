@@ -439,6 +439,18 @@
     }
 }
 
+@media screen and (max-width: 694px) {
+    #fc #fc6, #fc7 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:527px) {
+    #fc7 {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .cards-section {
         grid-template-columns: 47.5% 5% 47.5%;
