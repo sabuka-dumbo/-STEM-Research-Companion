@@ -145,12 +145,13 @@ html, body{
     width: 80%;
 }
 .cards-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2);
 }
 #card{
     border: 1px solid black;
-    width: auto;
+    width: 20vw;
+    height: 30vh;
 }
 
 
