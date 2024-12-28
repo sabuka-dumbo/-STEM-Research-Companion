@@ -241,7 +241,7 @@
     display: inline-block;
     background-color: aliceblue;
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 5%;
     margin-top: 20px;
     border-radius: 10px;
 }
@@ -313,6 +313,18 @@
     color: white;
 }
 
+@media screen and (max-width: 1244px) {
+    .cards-section {
+        width: 1000px;
+        margin-left: calc((100% - 1000px) / 2);
+    }
+
+    .mp-card {
+        width: 300px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
 
 @media screen and (max-width: 1040px) {
     .navbar-title {
