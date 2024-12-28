@@ -139,10 +139,11 @@
 
 .functions_div {
     position: relative;
-    top: 150px;
+    top: 0;
     left: 0;
     width: 90%;
     height: 90px;
+    margin-top: 150px;
     margin-left: 5%;
     margin-right: 5%;
     background-color: aqua;
@@ -169,6 +170,10 @@
 
     .navbar-link {
         font-size: 15px;
+    }
+
+    .functions_div {
+        margin-top: 120px;
     }
 }
 
@@ -198,6 +203,10 @@
 
     .burger-menu {
         top: -10px;
+    }
+
+    .functions_div {
+        margin-top: 135px;
     }
 }
 
