@@ -356,16 +356,6 @@
 }
 
 @media screen and (max-width: 1244px) {
-    .cards-section {
-        width: 1000px;
-        margin-left: calc((100% - 1000px) / 2);
-    }
-
-    .mp-card {
-        width: 300px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
 }
 
 @media screen and (max-width: 1040px) {
