@@ -225,7 +225,7 @@
 .cards-section {
     position: relative;
     top: 0;
-    left: calc((100% - 1200px) / 2);
+    left: 0;
     width: 1200px;
 }
 
