@@ -115,15 +115,23 @@ html, body{
     height: 40%;
 }
 .empty{
-    background-color: rgb(255, 235, 191);
+    background-color: rgb(191, 162, 253);
     height: 30vh;
     width: 100%;
+}
+.about-page{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(61, 59, 59, 0.379), rgba(0, 0, 0, 0.731)), url('/static/pics/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 .about-title{
     font-size: 3em;
     font-family: 'Itim', sans-serif;
     color: black;
     margin-left: 3vw;
+    margin-top: 5vh;
 }
 .about-textbox{
     align-items: center;
@@ -131,18 +139,22 @@ html, body{
     justify-content: center;
 }
 .choose-title{
-    font-size: 2em;
+    margin-top: 5vh;
+    font-size: 3em;
     font-family: 'Itim', sans-serif;
     color: black;
     text-align: center;
+    padding-bottom: 3vh;
 }
 .about-text{
-    font-size: 1em;
+    font-size: 1.5em;
+    margin: 0 auto;
     color: black;
     font-family: 'Itim', sans-serif;
     text-align: center;
     align-items: center;
     width: 80%;
+    font-weight: 100;
 }
 .cards-container{
     margin-top: 10vh;
@@ -155,12 +167,24 @@ html, body{
     justify-content: space-between;
 }
 #card{
-    border: 1px solid black;
+    border: 1px solid transparent;
     height: 30vh;
     flex: 1 1 calc(25% - 60px);
+    border-radius: 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 #card-title{
-    
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+#card-text{
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
