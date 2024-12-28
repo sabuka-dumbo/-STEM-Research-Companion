@@ -156,8 +156,11 @@ html, body{
 }
 #card{
     border: 1px solid black;
-    
+    height: 30vh;
     flex: 1 1 calc(25% - 60px);
+}
+#card-title{
+    
 }
 
 
