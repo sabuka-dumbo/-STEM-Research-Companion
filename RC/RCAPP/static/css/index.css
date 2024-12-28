@@ -226,7 +226,8 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 1200px;
+    width: 1150px;
+    margin-left: calc((100% - 1150px) / 2);
 }
 
 .mp-card {
