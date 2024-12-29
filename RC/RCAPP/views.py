@@ -13,3 +13,6 @@ def register(request):
 
 def info(request):
     return render(request, "infopage.html")
+
+def workspace(request, PID):
+    return render(request, "workspace.html")
