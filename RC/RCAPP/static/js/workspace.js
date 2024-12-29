@@ -110,9 +110,6 @@ notify_icon.addEventListener("click", function() {
 
 */
 
-
-// script.js
-
 // Initialize the GoJS diagram
 let diagram = null;
 document.addEventListener("DOMContentLoaded", () => {
