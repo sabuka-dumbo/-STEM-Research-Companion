@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       strokeWidth: 0,
     }),
     go.GraphObject.make(go.TextBlock, {
-      margin: 8,
+      margin: 10,
       editable: true, // Allow users to edit text
     },
     new go.Binding("text", "key"))
