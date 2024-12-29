@@ -180,7 +180,11 @@ html, body{
     width: 70%;
     margin: 0 auto;
 }
-
+.icon{
+    width: 25%;
+    height: auto;
+    
+}
 
 
 
