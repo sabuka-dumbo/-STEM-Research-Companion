@@ -106,3 +106,83 @@ notify_icon.addEventListener("click", function() {
         notify_div.style.display = '';
     })
 })
+
+
+/* ss */
+
+function init() {
+    const $ = go.GraphObject.make;
+    const myDiagram = $(go.Diagram, "myDiagramDiv", {
+      "undoManager.isEnabled": true, // Enable undo/redo
+    });
+
+    // Define a node template
+    myDiagram.nodeTemplate = $(
+      go.Node,
+      "Auto",
+      $(go.Shape, "RoundedRectangle", { fill: "lightblue" }),
+      $(go.TextBlock, { margin: 8 }, new go.Binding("text", "key"))
+    );
+
+    // Define a link template
+    myDiagram.linkTemplate = $(
+      go.Link,
+      $(go.Shape), // Line
+      $(go.Shape, { toArrow: "OpenTriangle" }) // Arrowhead
+    );
+
+    // Initialize diagram model with example data
+    myDiagram.model = new go.GraphLinksModel(
+      [{ key: "Main Idea" }, { key: "Sub Idea 1" }, { key: "Sub Idea 2" }],
+      [
+        { from: "Main Idea", to: "Sub Idea 1" },
+        { from: "Main Idea", to: "Sub Idea 2" },
+      ]
+    );
+  }
+
+  function addNode() {
+    const nodeData = { key: "New Idea" };
+    myDiagram.model.addNodeData(nodeData);
+  }
+
+  const canvas = document.getElementById("mindmapCanvas");
+
+  // Example: Create a new node
+  function createNode(x, y, text) {
+    const node = document.createElement("div");
+    node.style.position = "absolute";
+    node.style.left = x + "px";
+    node.style.top = y + "px";
+    node.style.width = "100px";
+    node.style.height = "50px";
+    node.style.border = "1px solid black";
+    node.style.backgroundColor = "lightblue";
+    node.style.textAlign = "center";
+    node.style.lineHeight = "50px";
+    node.innerText = text;
+
+    canvas.appendChild(node);
+
+    // Make node draggable
+    node.addEventListener("mousedown", (event) => {
+      const offsetX = event.offsetX;
+      const offsetY = event.offsetY;
+
+      const moveNode = (moveEvent) => {
+        node.style.left = moveEvent.pageX - offsetX + "px";
+        node.style.top = moveEvent.pageY - offsetY + "px";
+      };
+
+      const stopMoving = () => {
+        document.removeEventListener("mousemove", moveNode);
+        document.removeEventListener("mouseup", stopMoving);
+      };
+
+      document.addEventListener("mousemove", moveNode);
+      document.addEventListener("mouseup", stopMoving);
+    });
+  }
+
+  createNode(100, 100, "Main Idea");
+  createNode(300, 200, "Sub Idea");
