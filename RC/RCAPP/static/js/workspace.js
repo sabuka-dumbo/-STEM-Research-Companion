@@ -1,4 +1,4 @@
-const navbar = document.getElementById("navbar");
+/*const navbar = document.getElementById("navbar");
 const burgermenu = document.getElementById("burgermenu");
 const span1 = document.getElementById("span1");
 const span2 = document.getElementById("span2");
@@ -108,81 +108,78 @@ notify_icon.addEventListener("click", function() {
 })
 
 
-/* ss */
+*/
 
-function init() {
-    const $ = go.GraphObject.make;
-    const myDiagram = $(go.Diagram, "myDiagramDiv", {
-      "undoManager.isEnabled": true, // Enable undo/redo
-    });
 
-    // Define a node template
-    myDiagram.nodeTemplate = $(
-      go.Node,
-      "Auto",
-      $(go.Shape, "RoundedRectangle", { fill: "lightblue" }),
-      $(go.TextBlock, { margin: 8 }, new go.Binding("text", "key"))
-    );
+// script.js
 
-    // Define a link template
-    myDiagram.linkTemplate = $(
-      go.Link,
-      $(go.Shape), // Line
-      $(go.Shape, { toArrow: "OpenTriangle" }) // Arrowhead
-    );
+// Initialize the GoJS diagram
+let diagram = null;
+document.addEventListener("DOMContentLoaded", () => {
+  diagram = go.GraphObject.make(go.Diagram, "mindmap", {
+    "undoManager.isEnabled": true, // Enable undo/redo
+    layout: go.GraphObject.make(go.TreeLayout, { angle: 90, layerSpacing: 40 }),
+  });
 
-    // Initialize diagram model with example data
-    myDiagram.model = new go.GraphLinksModel(
-      [{ key: "Main Idea" }, { key: "Sub Idea 1" }, { key: "Sub Idea 2" }],
-      [
-        { from: "Main Idea", to: "Sub Idea 1" },
-        { from: "Main Idea", to: "Sub Idea 2" },
-      ]
-    );
+  // Define node template
+  diagram.nodeTemplate = go.GraphObject.make(
+    go.Node,
+    "Auto",
+    go.GraphObject.make(go.Shape, "RoundedRectangle", {
+      fill: "lightblue",
+      strokeWidth: 0,
+    }),
+    go.GraphObject.make(go.TextBlock, {
+      margin: 8,
+      editable: true, // Allow users to edit text
+    },
+    new go.Binding("text", "key"))
+  );
+
+  // Define link template
+  diagram.linkTemplate = go.GraphObject.make(
+    go.Link,
+    { routing: go.Link.Orthogonal, corner: 5 },
+    go.GraphObject.make(go.Shape, { strokeWidth: 3, stroke: "#555" })
+  );
+
+  // Initialize the model
+  diagram.model = new go.TreeModel([
+    { key: "Root", color: "lightblue" },
+  ]);
+});
+
+// Function to add a node
+function addNode() {
+  const selectedNode = diagram.selection.first();
+  if (!selectedNode) {
+    alert("Please select a node to add a child.");
+    return;
   }
+  const newNodeKey = `Node ${diagram.model.nodeDataArray.length + 1}`;
+  diagram.startTransaction("addNode");
+  diagram.model.addNodeData({
+    key: newNodeKey,
+    parent: selectedNode.data.key,
+    color: "lightblue",
+  });
+  diagram.commitTransaction("addNode");
+}
 
-  function addNode() {
-    const nodeData = { key: "New Idea" };
-    myDiagram.model.addNodeData(nodeData);
+// Function to save the diagram
+function saveMap() {
+  const savedData = diagram.model.toJson();
+  localStorage.setItem("mindMapData", savedData);
+  alert("Mind map saved!");
+}
+
+// Function to load the diagram
+function loadMap() {
+  const savedData = localStorage.getItem("mindMapData");
+  if (savedData) {
+    diagram.model = go.Model.fromJson(savedData);
+    alert("Mind map loaded!");
+  } else {
+    alert("No saved mind map found.");
   }
-
-  const canvas = document.getElementById("mindmapCanvas");
-
-  // Example: Create a new node
-  function createNode(x, y, text) {
-    const node = document.createElement("div");
-    node.style.position = "absolute";
-    node.style.left = x + "px";
-    node.style.top = y + "px";
-    node.style.width = "100px";
-    node.style.height = "50px";
-    node.style.border = "1px solid black";
-    node.style.backgroundColor = "lightblue";
-    node.style.textAlign = "center";
-    node.style.lineHeight = "50px";
-    node.innerText = text;
-
-    canvas.appendChild(node);
-
-    // Make node draggable
-    node.addEventListener("mousedown", (event) => {
-      const offsetX = event.offsetX;
-      const offsetY = event.offsetY;
-
-      const moveNode = (moveEvent) => {
-        node.style.left = moveEvent.pageX - offsetX + "px";
-        node.style.top = moveEvent.pageY - offsetY + "px";
-      };
-
-      const stopMoving = () => {
-        document.removeEventListener("mousemove", moveNode);
-        document.removeEventListener("mouseup", stopMoving);
-      };
-
-      document.addEventListener("mousemove", moveNode);
-      document.addEventListener("mouseup", stopMoving);
-    });
-  }
-
-  createNode(100, 100, "Main Idea");
-  createNode(300, 200, "Sub Idea");
+}

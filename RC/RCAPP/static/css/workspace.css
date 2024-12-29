@@ -464,3 +464,29 @@
         top: -150%;
     }
 }
+
+#buttons {
+    margin: 10px 0;
+  }
+  
+  #buttons button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  #mindmap {
+    width: 80%;
+    height: 80vh;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
