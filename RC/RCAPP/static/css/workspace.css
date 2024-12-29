@@ -538,7 +538,6 @@
     padding: 0;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    background-color: #ECDFCC;
     display: grid;
     grid-template-columns: 60% 40%;
     margin-bottom: 5px;
@@ -556,7 +555,6 @@
     margin: 0;
     grid-template-columns: 1;
     grid-template-rows: 1;
-    background-color: aquamarine;
 }
 
 .mm-sl-buttons {
@@ -566,14 +564,61 @@
     left: 60%;
     width: 40%;
     height: 80%;
-    background-color: rgb(255, 255, 11);
 }
 
 .mm-sl-button-1 {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 40px;
+    right: 0;
+    width: 60px;
     height: 100%;
-    padding-top: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    background-color: #A5B68D;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mm-sl-button-2 {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 60px;
+    height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mm-sl-button-3 {
+    position: absolute;
+    top: 0;
+    right: 140px;
+    width: 80px;
+    height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mindmap-control-buttons {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ECDFCC;
 }
