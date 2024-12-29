@@ -7,11 +7,16 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'css/workspace.css' %}">
-    <link
-            type="text/css"
-            rel="stylesheet"
-            href="//cdn.jsdelivr.net/npm/jsmind@0.8.6/style/jsmind.css"
-        />
+
+        <link
+        type="text/css"
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/jsmind@0.8.6/style/jsmind.css"
+    />
+    <script
+        type="text/javascript"
+        src="//cdn.jsdelivr.net/npm/jsmind@0.8.6/es6/jsmind.js"
+    ></script>
 {% endblock %}
 
 {% block body %}
@@ -207,11 +212,5 @@
             var jm = new jsMind(options);
             jm.show(mind);
         </script>
-
-
-    <script
-            type="text/javascript"
-            src="//cdn.jsdelivr.net/npm/jsmind@0.8.6/es6/jsmind.js"></script>
-
     <script src="{% static 'js/workspace.js' %}"></script>
 {% endblock %}
