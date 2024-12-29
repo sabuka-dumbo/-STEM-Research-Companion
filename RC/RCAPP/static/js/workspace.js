@@ -98,7 +98,6 @@ function notification(text) {
 }
 
 notify_icon.addEventListener("click", function() {
-    console.log("s")
     notify_div.style.animation = '';
     notify_div.style.animation = "notify_div_animation_close ease 1s";
 
