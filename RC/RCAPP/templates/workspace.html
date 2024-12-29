@@ -8,15 +8,6 @@
 {% block links %}
     <link rel="stylesheet" href="{% static 'css/workspace.css' %}">
 
-        <link
-        type="text/css"
-        rel="stylesheet"
-        href="//cdn.jsdelivr.net/npm/jsmind@0.8.6/style/jsmind.css"
-    />
-    <script
-        type="text/javascript"
-        src="//cdn.jsdelivr.net/npm/jsmind@0.8.6/es6/jsmind.js"
-    ></script>
 {% endblock %}
 
 {% block body %}
@@ -197,20 +188,5 @@
         </svg>
     </div>
 
-    <div id="jsmind_container"></div>
-
-        <script type="text/javascript">
-            var mind = {
-                // 3 data formats were supported ...
-                // see documents for more information
-            };
-            var options = {
-                container: 'jsmind_container',
-                theme: 'orange',
-                editable: true,
-            };
-            var jm = new jsMind(options);
-            jm.show(mind);
-        </script>
     <script src="{% static 'js/workspace.js' %}"></script>
 {% endblock %}
