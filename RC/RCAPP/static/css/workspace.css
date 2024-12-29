@@ -465,33 +465,18 @@
     }
 }
 
-
-#buttons {
-    margin: 10px 0;
-}
-
-#buttons button {
-    margin: 0 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#buttons button:hover {
-    background-color: #0056b3;
-}
-
 #mindmap {
-    width: 800px;
-    height: 600px;
+    width: 90%;
+    height: 400px;
     border: 1px solid #ccc;
     background-color: white;
     overflow: hidden; 
     position: relative;
+    padding: 0;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
 }
 
 .mm-div {
@@ -500,5 +485,92 @@
     left: 0;
     width: 100%;
     height: max-content;
-    background-color: #da845951;
+}
+
+.mm-loads {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(90% - 20px);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.432);
+    background-color: white;
+    border-radius: 3px;
+}
+
+.mm-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.mm-line {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 1.5px solid black;
+}
+
+.mm-saved-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #ECDFCC;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-bottom: 5px;
+}
+
+.mm-sl-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    color: black;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    background-color: aquamarine;
+}
+
+.mm-sl-buttons {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    background-color: rgb(255, 255, 11);
+}
+
+.mm-sl-button-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
 }

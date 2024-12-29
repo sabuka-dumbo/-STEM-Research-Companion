@@ -188,17 +188,29 @@
     </div>
 
 
-    <div class="working-area">
+    <div class="working_area">
         <div class="mm-div">
+            <div id="mindmap"></div>
 
+            <!-- add help buttons here -->
+
+            <div class="mm-loads">
+                <h1 class="big-font mm-title">Saved mindmaps:</h1>
+
+                <hr class="mm-line">
+
+                <div class="mm-saved-list">
+                    <h1 class="normal-font mm-sl-title">Saved mindmap name</h1>
+
+                    <div class="mm-sl-buttons">
+                        <button class="normal-font mm-sl-button-1">Save</button>
+                    </div>
+                </div>
+            </div>
         </div>  
+
     </div>
-    <div id="buttons">
-      <button onclick="addNode()">Add Node</button>
-      <button onclick="saveMap()">Save</button>
-      <button onclick="loadMap()">Load</button>
-    </div>
-    <div id="mindmap"></div>
+
 
     <script src="https://unpkg.com/gojs"></script>
     <script src="{% static 'js/workspace.js' %}"></script>
