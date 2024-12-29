@@ -68,9 +68,9 @@ html, body{
 .register-btn:hover{
     background-color: rgb(82, 82, 242);
 }
-.login-iocn{
-
-    
+.login-icon{
+    display: none;
+    width: 30p
 }
 
 .text-box{
