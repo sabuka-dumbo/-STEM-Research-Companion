@@ -11,7 +11,6 @@
 {% endblock %}
 
 {% block body %}
-
     <nav class="navbar" id="navbar">
         <div class="burgermenu" id="burgermenu">
             <span class="span span1" id="span1"></span>
@@ -188,13 +187,18 @@
         </svg>
     </div>
 
-    <!--
+
+    <div class="working-area">
+        <div class="mm-div">
+
+        </div>  
+    </div>
     <div id="buttons">
       <button onclick="addNode()">Add Node</button>
       <button onclick="saveMap()">Save</button>
       <button onclick="loadMap()">Load</button>
     </div>
-    <div id="mindmap"></div>-->
+    <div id="mindmap"></div>
 
     <script src="https://unpkg.com/gojs"></script>
     <script src="{% static 'js/workspace.js' %}"></script>
