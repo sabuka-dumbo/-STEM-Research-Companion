@@ -25,7 +25,6 @@ def workspace(request, PID):
     else:
         return redirect('index')
     
-    print(project)
 
 
     return render(request, "workspace.html")
