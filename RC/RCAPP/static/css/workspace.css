@@ -644,6 +644,7 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
 }
 
 .mm-save-child {
@@ -663,6 +664,7 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
 }
 
 .mm-cancel-child {
@@ -682,6 +684,7 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
 }
 
 .mm-delete-child {
@@ -701,6 +704,7 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
 }
 
 .mm-title-gen {

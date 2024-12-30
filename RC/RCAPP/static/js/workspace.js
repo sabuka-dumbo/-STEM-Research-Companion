@@ -210,7 +210,7 @@ function loadNote(Name) {
 }
 
 
-function deleteNode() {
+function deleteNote() {
   const selectedPart = diagram.selection.first();
   if (selectedPart) {
     diagram.startTransaction("deleteNode");
