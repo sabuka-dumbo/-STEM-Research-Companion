@@ -32,7 +32,7 @@ def save_mindmap(request):
         if not name or not data:
             return JsonResponse({"error": "Name and data are required"}, status=400)
 
-        mindmap, created = Mindmap.objects.update_or_create(name=name, defaults={"data": data})
+        mindmap, created = Mindmap.objects.update_or_create(name=name, defaults={"data": data}, research=Project.objects.all().get(project_name="sda"))
         return JsonResponse({"message": "Mind map saved", "created": created})
 
 @csrf_exempt
