@@ -216,7 +216,7 @@ function loadNote(Name, MPK) {
 }
 
 function clear_mm() {
-  diagram.model = new go.TreeModel([]);
+  diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue", value: "root" }]);
 }
 
 function deleteNote() {
