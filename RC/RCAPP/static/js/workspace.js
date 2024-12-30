@@ -193,18 +193,25 @@ function deleteNode() {
   }
 }
 
+
 function listAllMindMaps() {
   fetch("/list/")
     .then((response) => response.json())
     .then((data) => {
-      const savedMindMaps = document.getElementById("saved-mindmaps");
-      console.log(savedMindMaps)
+      if (data.mindmaps && data.mindmaps.length > 0) {
+        console.log("Saved Mind Maps:");
+        data.mindmaps.forEach((map) => {
+          console.log(map.name);
+        });
+      } else {
+        console.log("No saved mind maps found.");
+      }
     })
     .catch((error) => {
       console.error("Error listing mind maps:", error);
-      alert("Failed to list mind maps.");
     });
 }
+
 
 
 function addNode() {
