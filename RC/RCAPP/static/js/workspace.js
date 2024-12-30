@@ -215,6 +215,9 @@ function loadNote(Name, MPK) {
     });
 }
 
+function clear_mm() {
+  diagram.model = new go.TreeModel([]);
+}
 
 function deleteNote() {
   let mindmapName = document.getElementById("mindmapName").value;
@@ -233,6 +236,7 @@ function deleteNote() {
           document.getElementById("mindmapName").value = "";
           document.getElementById(current_id).remove();
           mm_unlock();
+          clear_mm();
         }
       })
       .catch((error) => {
