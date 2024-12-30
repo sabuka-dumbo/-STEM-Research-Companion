@@ -199,7 +199,7 @@
                 <button onclick="deleteNote()" class="mm-delete-child normal-font">Delete</button>
                 <button onclick="" class="mm-cancel-child normal-font">Cancel editing</button>
                 <button onclick="addNode()" class="mm-add-child normal-font">Add child</button>
-                <button onclick="saveNode()" class="mm-save-child normal-font">Save</button>
+                <button onclick="saveMap()" class="mm-save-child normal-font">Save</button>
             </div>
 
             <div class="mm-loads">
@@ -209,11 +209,11 @@
                 
                 {% if mindmaps != 0 %}
                     {% for i in mindmaps %}
-                        <div class="mm-saved-list">
+                        <div class="mm-saved-list" id="{{ i.pk }}">
                             <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
 
                             <div class="mm-sl-buttons">
-                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`)" id="mm-buttons">Load</button>
+                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`, `{{ i.pk }}`)" id="mm-buttons">Load</button>
 
                                 <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
                             </div>

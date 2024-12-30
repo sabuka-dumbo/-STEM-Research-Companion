@@ -5,6 +5,9 @@ const span2 = document.getElementById("span2");
 const span3 = document.getElementById("span3");
 const navbar2 = document.getElementById("navbar-main-part");
 
+let current_name = "";
+let current_id = 0;
+
 let is_ready = true;
 
 let open = false;
@@ -188,7 +191,7 @@ function mm_unlock() {
   })
 }
 
-function loadNote(Name) {
+function loadNote(Name, MPK) {
   fetch(`/load/${Name}`)
     .then((response) => response.json())
     .then((data) => {
@@ -200,6 +203,9 @@ function loadNote(Name) {
         mm_lock();
         document.getElementById("mindmapName").value = Name;
         document.getElementById('mindmapName').setAttribute('readonly', true);
+        current_id = MPK;
+        current_name = Name;
+        console.log(current_id, current_name)
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
@@ -224,6 +230,7 @@ function deleteNote() {
           alert(`Mind map "${mindmapName}" deleted successfully!`);
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
+          document.getElementById(MPK).remove;
           mm_unlock();
         }
       })
