@@ -626,7 +626,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 220px;
+    width: 350px;
     height: max-content;
     padding: 0;
     margin: 0;
@@ -638,11 +638,12 @@
     color: black;
     border: 0;
     border-radius: 2px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
 }
 
 .mm-add-child {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0px;
     width: 120px;
     height: max-content;
@@ -654,5 +655,17 @@
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.432);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+}
+
+.mm-title-gen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: max-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 0;
 }

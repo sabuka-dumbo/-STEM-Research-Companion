@@ -192,3 +192,5 @@ function addNode() {
   });
   diagram.commitTransaction("addNode");
 }
+
+listAllMindMaps()
