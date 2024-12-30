@@ -166,12 +166,25 @@ function deleteNode() {
 }
 
 function listAllMindMaps() {
-  console.log("Saved Mind Maps:");
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    console.log(key);
-  }
+  fetch("/list/")
+    .then((response) => response.json())
+    .then((data) => {
+      const savedMindMaps = document.getElementById("saved-mindmaps");
+      savedMindMaps.innerHTML = "<h3>Saved Mind Maps</h3>";
+
+      data.mindmaps.forEach((map) => {
+        const button = document.createElement("button");
+        button.textContent = `Load ${map.name}`;
+        button.onclick = () => loadNote(map.name);
+        savedMindMaps.appendChild(button);
+      });
+    })
+    .catch((error) => {
+      console.error("Error listing mind maps:", error);
+      alert("Failed to list mind maps.");
+    });
 }
+
 
 function addNode() {
   const selectedNode = diagram.selection.first();

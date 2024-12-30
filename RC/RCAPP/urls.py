@@ -8,5 +8,7 @@ urlpatterns = [
     path("info/", views.info, name="info"),
     path("workspace/<int:PID>/", views.workspace, name="workspace"),
 
-    ## 
+    ## fetchs
+    path("save/", views.save_mindmap, name="save_mindmap"),
+    path("load/", views.load_mindmap, name="load_mindmap"),
 ]
