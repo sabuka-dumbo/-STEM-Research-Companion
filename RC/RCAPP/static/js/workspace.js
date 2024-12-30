@@ -172,6 +172,7 @@ function loadNote(Name) {
       } else {
         diagram.model = go.Model.fromJson(data.data);
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
+        document.getElementById("mm-buttons").Enabled = 
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
