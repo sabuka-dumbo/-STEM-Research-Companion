@@ -196,6 +196,8 @@
 
             <div class="mindmap-control-buttons">
                 <input type="text" id="mindmapName" class="normal-font" placeholder="Enter mind map name" />
+                <button onclick="deleteNote()" class="mm-delete-child normal-font">Delete</button>
+                <button onclick="" class="mm-cancel-child normal-font">Cancel editing</button>
                 <button onclick="addNode()" class="mm-add-child normal-font">Add child</button>
                 <button onclick="saveNode()" class="mm-save-child normal-font">Save</button>
             </div>
@@ -219,6 +221,10 @@
                     {% endfor %}
                 {% else %}
                 {% endif %}
+
+                <div class="mm-lock" id="mm-lock">
+                    <h1 class="mm-lock-text big-font">Finish editing first</h1>
+                </div>
             </div>
 
             <br>

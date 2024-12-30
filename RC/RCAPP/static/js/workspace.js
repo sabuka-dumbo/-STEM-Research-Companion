@@ -162,18 +162,10 @@ function saveMap() {
     });
 }
 
-function disableAllButtons() {
-  const buttons = document.querySelectorAll(".mm-buttons");
-  buttons.forEach((button) => {
-    button.disabled = true;
-  });
-}
+function mm_lock() {
+  const mm_lock_back = document.getElementById("mm-lock");
 
-function enableAllButtons() {
-  const buttons = document.querySelectorAll(".mm-buttons");
-  buttons.forEach((button) => {
-    button.disabled = false;
-  });
+  mm_lock_back.style.display = "block";
 }
 
 function loadNote(Name) {
@@ -185,7 +177,7 @@ function loadNote(Name) {
       } else {
         diagram.model = go.Model.fromJson(data.data);
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
-        disableAllButtons();
+        mm_lock();
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
