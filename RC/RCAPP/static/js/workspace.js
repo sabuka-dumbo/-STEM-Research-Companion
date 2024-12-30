@@ -206,7 +206,6 @@ function loadNote(Name, MPK) {
         current_id = MPK;
         current_name = Name;
         console.log(current_id, current_name)
-        alert(`Mind map "${data.name}" loaded!`);
       }
     })
     .catch((error) => {
@@ -216,14 +215,13 @@ function loadNote(Name, MPK) {
 }
 
 function clear_mm() {
-  diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue", value: "root" }]);
+  diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue", text: "Root" }]);
 }
 
 function deleteNote() {
   let mindmapName = document.getElementById("mindmapName").value;
 
   if (mindmapName) {
-    console.log("sent")
     console.log(mindmapName);
     fetch(`/delete/${mindmapName}/`)
       .then((response) => response.json())
@@ -231,7 +229,6 @@ function deleteNote() {
         if (data.error) {
           alert(`Error: ${data.error}`);
         } else {
-          alert(`Mind map "${mindmapName}" deleted successfully!`);
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
           document.getElementById(current_id).remove();
