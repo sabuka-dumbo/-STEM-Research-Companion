@@ -211,15 +211,9 @@ function loadNote(Name) {
 
 
 function deleteNote() {
-  const selectedPart = diagram.selection.first();
   const mindmapName = document.getElementById("mindmapName").value;
 
-  if (selectedPart) {
-    diagram.startTransaction("deleteNode");
-    diagram.remove(selectedPart);
-    diagram.commitTransaction("deleteNode");
-    alert("Deleted selected item.");
-  } else if (mindmapName) {
+  if (mindmapName) {
     fetch(`/delete/${mindmapName}`, { method: "DELETE" })
       .then((response) => response.json())
       .then((data) => {
