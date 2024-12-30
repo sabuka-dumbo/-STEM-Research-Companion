@@ -179,3 +179,16 @@ function loadMap() {
     alert("No saved mind map found.");
   }
 }
+
+// Function to delete the selected node or link
+function deleteNode() {
+  const selectedPart = diagram.selection.first(); // Get the first selected part
+  if (selectedPart) {
+    diagram.startTransaction("deleteNode");
+    diagram.remove(selectedPart); // Remove the selected part (node or link)
+    diagram.commitTransaction("deleteNode");
+    alert("Deleted selected item.");
+  } else {
+    alert("No node or link selected.");
+  }
+}
