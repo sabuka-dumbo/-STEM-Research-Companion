@@ -74,6 +74,7 @@ html, body{
 
 .text-box{
     margin-left: 5vw;
+    margin-right: 0%;
     width: 70%;
 }
 .text-box h1{
@@ -83,6 +84,7 @@ html, body{
     font-weight: bold;
     margin-top: 10vh;
     width: 70%;
+    border: 1px solid white;
 }
 .text-box p{
     font-size: 2em;
