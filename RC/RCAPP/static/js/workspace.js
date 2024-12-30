@@ -214,8 +214,10 @@ function deleteNote() {
   let mindmapName = document.getElementById("mindmapName").value;
 
   if (mindmapName) {
-    console.log(mindmapName)
-    fetch(`/delete/${mindmapName}`)
+    console.log(mindmapName);
+    fetch(`/delete/${mindmapName}/`, {
+      method: "DELETE",
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
@@ -231,9 +233,10 @@ function deleteNote() {
         alert("Failed to delete the mind map.");
       });
   } else {
-    alert("No node selected or mindmap name provided for deletion.");
+    alert("No mindmap name provided for deletion.");
   }
 }
+
 
 
 function listAllMindMaps() {
