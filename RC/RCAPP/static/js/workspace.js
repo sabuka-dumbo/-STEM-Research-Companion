@@ -179,3 +179,13 @@ function deleteNode() {
     alert("No node or link selected.");
   }
 }
+
+function listAllMindMaps() {
+  console.log("Saved Mind Maps:");
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    console.log(key);
+  }
+}
+
+listAllMindMaps()
