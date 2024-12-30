@@ -175,6 +175,19 @@ function mm_lock() {
   })
 }
 
+function mm_unlock() {
+  const mm_lock_back = document.getElementById("mm-lock");
+
+  mm_lock_back.style.display = "block";
+  mm_lock_back.style.animation = "fade_out 1s ease";
+
+  mm_lock_back.addEventListener("animationend", function() {
+    mm_lock_back.style.animation = '';
+    mm_lock_back.style.display = "none";
+    mm_lock_back.style.opacity = "0%";
+  })
+}
+
 function loadNote(Name) {
   fetch(`/load/${Name}`)
     .then((response) => response.json())
@@ -185,6 +198,8 @@ function loadNote(Name) {
         diagram.model = go.Model.fromJson(data.data);
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
         mm_lock();
+        document.getElementById("mindmapName").value = Name;
+        document.getElementById("mindmapName").
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
