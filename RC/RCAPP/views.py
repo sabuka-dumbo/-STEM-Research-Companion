@@ -49,11 +49,11 @@ def save_mindmap(request):
 
 
 @csrf_exempt
-def load_mindmap(name):
+def load_mindmap(request, MN):
     ## add filtering with research id later
 
     try:
-        mindmap = Mindmap.objects.all().get(name=Name)
+        mindmap = Mindmap.objects.all().get(name=MN)
         return JsonResponse({"name": mindmap.name, "data": mindmap.data})
     except Mindmap.DoesNotExist:
         return JsonResponse({"error": "Mind map not found"}, status=404)
