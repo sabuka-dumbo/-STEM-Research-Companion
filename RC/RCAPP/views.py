@@ -54,7 +54,7 @@ def save_mindmap(request):
                 name=name,
                 defaults={"data": data, "research": project}
             )
-            return JsonResponse({"message": "Mind map saved", "created": created})
+            return JsonResponse({"message": "Mind map saved", "created": created, "mm_pk": mindmap.pk})
 
         except json.JSONDecodeError:
             return JsonResponse({"error": "Invalid JSON"}, status=400)

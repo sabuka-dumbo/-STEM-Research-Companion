@@ -156,7 +156,21 @@ function saveMap() {
       if (data.error) {
         alert(`Error: ${data.error}`);
       } else {
-        alert(`Mind map "${nameInput}" saved!`);
+        clear_mm();
+        let data_PK = data.mm_pk;
+
+        document.getElementById("mm-loads-id") += 
+        `
+          <div class="mm-saved-list" id='${{ data_PK }}'>
+            <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
+
+            <div class="mm-sl-buttons">
+                <button class="normal-font mm-sl-button-2" onclick="loadNote('${{ d }}', '${{ data_PK }}')" id="mm-buttons">Load</button>
+
+                <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
+            </div>
+          </div>
+        `;
       }
     })
     .catch((error) => {

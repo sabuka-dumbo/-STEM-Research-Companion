@@ -206,21 +206,22 @@
                 <h1 class="big-font mm-title">Saved mindmaps:</h1>
 
                 <hr class="mm-line">
-                
-                {% if mindmaps != 0 %}
-                    {% for i in mindmaps %}
-                        <div class="mm-saved-list" id="{{ i.pk }}">
-                            <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
+                <div id="mm-loads-id">
+                    {% if mindmaps != 0 %}
+                        {% for i in mindmaps %}
+                            <div class="mm-saved-list" id="{{ i.pk }}">
+                                <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
 
-                            <div class="mm-sl-buttons">
-                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`, `{{ i.pk }}`)" id="mm-buttons">Load</button>
+                                <div class="mm-sl-buttons">
+                                    <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`, `{{ i.pk }}`)" id="mm-buttons">Load</button>
 
-                                <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
+                                    <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
+                                </div>
                             </div>
-                        </div>
-                    {% endfor %}
-                {% else %}
-                {% endif %}
+                        {% endfor %}
+                    {% else %}
+                    {% endif %}
+                </div>
 
                 <div class="mm-lock" id="mm-lock">
                     <h1 class="mm-lock-text big-font">Finish editing first</h1>
