@@ -622,3 +622,17 @@
     margin-right: 5%;
     background-color: #ECDFCC;
 }
+
+#mindmapName {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

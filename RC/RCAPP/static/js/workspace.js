@@ -107,9 +107,8 @@ notify_icon.addEventListener("click", function() {
     })
 })
 
-
-
 let diagram = null;
+
 document.addEventListener("DOMContentLoaded", () => {
   diagram = go.GraphObject.make(go.Diagram, "mindmap", {
     "undoManager.isEnabled": true,
@@ -117,45 +116,33 @@ document.addEventListener("DOMContentLoaded", () => {
     initialContentAlignment: go.Spot.Center,
   });
 
-  // Define node template
   diagram.nodeTemplate = go.GraphObject.make(
     go.Node,
     "Auto",
-    go.GraphObject.make(go.Shape, "RoundedRectangle", {
-      fill: "lightblue",
-      strokeWidth: 0,
-    }),
-    go.GraphObject.make(go.TextBlock, {
-      margin: 8,
-      editable: true,
-    },
-    new go.Binding("text", "key"))
+    go.GraphObject.make(go.Shape, "RoundedRectangle", { fill: "lightblue", strokeWidth: 0 }),
+    go.GraphObject.make(go.TextBlock, { margin: 8, editable: true }, new go.Binding("text").makeTwoWay())
   );
 
-  // Define link template
   diagram.linkTemplate = go.GraphObject.make(
     go.Link,
     { routing: go.Link.Orthogonal, corner: 5 },
     go.GraphObject.make(go.Shape, { strokeWidth: 3, stroke: "#555" })
   );
 
-  diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue" }]);
+  diagram.model = new go.TreeModel([{ key: "Root", text: "Root", color: "lightblue" }]);
 });
 
-// Save mind map with a specific name
 function saveMap() {
   const nameInput = document.getElementById("mindmapName").value;
   if (!nameInput) {
     alert("Please enter a name for the mind map.");
     return;
   }
-
   const savedData = diagram.model.toJson();
   localStorage.setItem(nameInput, savedData);
   alert(`Mind map "${nameInput}" saved!`);
 }
 
-// Load a mind map by its name or ID
 function loadNote(noteId) {
   const savedData = localStorage.getItem(noteId);
   if (savedData) {
@@ -166,7 +153,6 @@ function loadNote(noteId) {
   }
 }
 
-// Function to delete the selected node or link
 function deleteNode() {
   const selectedPart = diagram.selection.first();
   if (selectedPart) {
@@ -187,21 +173,22 @@ function listAllMindMaps() {
   }
 }
 
-// Function to add a node
 function addNode() {
   const selectedNode = diagram.selection.first();
   if (!selectedNode) {
     alert("Please select a node to add a child.");
     return;
   }
+
   const newNodeKey = `Node ${diagram.model.nodeDataArray.length + 1}`;
+  const newNodeText = `New Node ${diagram.model.nodeDataArray.length + 1}`;
+
   diagram.startTransaction("addNode");
   diagram.model.addNodeData({
     key: newNodeKey,
+    text: newNodeText,
     parent: selectedNode.data.key,
     color: "lightblue",
   });
   diagram.commitTransaction("addNode");
 }
-
-listAllMindMaps()
