@@ -815,6 +815,10 @@
         margin-left: 1%;
     }
 
+    .mm-saved-list {
+        grid-template-rows: max-content 10px max-content;
+    }
+
     .mm-sl-title {
         position: relative;
         top: 0%;
@@ -829,6 +833,11 @@
 
     .mm-saved-list {
         height: 150px;
+    }
+
+    .mm-sl-button-2 {
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
 }
 
