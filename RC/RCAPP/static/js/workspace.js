@@ -211,11 +211,11 @@ function loadNote(Name) {
 
 
 function deleteNote() {
-  const mindmapName = document.getElementById("mindmapName").value;
+  let mindmapName = document.getElementById("mindmapName").value;
 
   if (mindmapName) {
     console.log(mindmapName)
-    fetch(`/delete/${mindmapName}/`)
+    fetch(`/delete/${mindmapName}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
