@@ -27,24 +27,3 @@
     font-family: "Itim";
     font-size: 15px;
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #b35454; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
