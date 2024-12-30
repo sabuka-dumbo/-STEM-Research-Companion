@@ -220,6 +220,7 @@ function deleteNote() {
   let mindmapName = document.getElementById("mindmapName").value;
 
   if (mindmapName) {
+    console.log("sent")
     console.log(mindmapName);
     fetch(`/delete/${mindmapName}/`)
       .then((response) => response.json())
@@ -230,7 +231,7 @@ function deleteNote() {
           alert(`Mind map "${mindmapName}" deleted successfully!`);
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
-          document.getElementById(MPK).remove;
+          document.getElementById(MPK) = '';
           mm_unlock();
         }
       })
