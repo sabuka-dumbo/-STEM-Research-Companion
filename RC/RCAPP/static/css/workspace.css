@@ -744,7 +744,6 @@
 
     .mindmap-control-buttons {
         padding-bottom: 60px;
-        background-color: #DA8359;
     }
 
     .mm-save-child {
@@ -761,5 +760,87 @@
 
     .mm-add-child {
         top: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .mindmap-control-buttons {
+        padding-bottom: 120px;
+        background-color: #DA8359;
+    }
+
+    .mm-save-child {
+        top: calc(100% - 100px);
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    .mm-delete-child {
+        top: calc(100% - 100px);      
+        left: 0;  
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .mm-cancel-child {
+        top: calc(100% - 50px);      
+        left: 0;  
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .mm-add-child {
+        top: calc(100% - 50px);      
+        right: 0;  
+        width: 40%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mm-save-child {
+        width: 48%;
+        margin-left: 1%;
+    }
+
+    .mm-delete-child {
+        width: 48%;
+        margin-right:15%;
+    }
+
+    .mm-cancel-child {
+        width: 48%;
+        margin-right:15%;
+    }
+
+    .mm-add-child {
+        width: 48%;
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .mm-save-child {
+        font-size: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mm-delete-child {
+        font-size: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mm-cancel-child {
+        font-size: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mm-add-child {
+        font-size: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
