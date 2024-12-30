@@ -27,3 +27,30 @@
     font-family: "Itim";
     font-size: 15px;
 }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar */
+    height: 8px; /* Thin scrollbar for horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1; /* Neutral color for the thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #f1f1f1; /* Adds a gap effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0; /* Darker shade on hover */
+}
+
+/* Optional: for Firefox */
+* {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #c1c1c1 #f1f1f1; /* Thumb and track colors */
+}
