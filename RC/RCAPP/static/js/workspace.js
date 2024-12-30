@@ -138,20 +138,48 @@ function saveMap() {
     alert("Please enter a name for the mind map.");
     return;
   }
+
   const savedData = diagram.model.toJson();
-  localStorage.setItem(nameInput, savedData);
-  alert(`Mind map "${nameInput}" saved!`);
+
+  fetch("/save/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name: nameInput, data: savedData }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        alert(`Error: ${data.error}`);
+      } else {
+        alert(`Mind map "${nameInput}" saved!`);
+      }
+    })
+    .catch((error) => {
+      console.error("Error saving mind map:", error);
+      alert("Failed to save mind map.");
+    });
 }
 
+
 function loadNote(noteId) {
-  const savedData = localStorage.getItem(noteId);
-  if (savedData) {
-    diagram.model = go.Model.fromJson(savedData);
-    alert(`Mind map "${noteId}" loaded!`);
-  } else {
-    alert(`No mind map found with the name "${noteId}".`);
-  }
+  fetch(`/load/?name=${encodeURIComponent(noteId)}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        alert(`Error: ${data.error}`);
+      } else {
+        diagram.model = go.Model.fromJson(data.data);
+        alert(`Mind map "${data.name}" loaded!`);
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading mind map:", error);
+      alert("Failed to load mind map.");
+    });
 }
+
 
 function deleteNode() {
   const selectedPart = diagram.selection.first();
