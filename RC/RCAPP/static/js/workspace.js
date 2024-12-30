@@ -157,17 +157,15 @@ function saveMap() {
         alert(`Error: ${data.error}`);
       } else {
         clear_mm();
+      
         let data_PK = data.mm_pk;
-
-        document.getElementById("mm-loads-id") += 
-        `
-          <div class="mm-saved-list" id='${{ data_PK }}'>
-            <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
-
+      
+        document.getElementById("mm-loads-id").innerHTML += `
+          <div class="mm-saved-list" id="${data_PK}">
+            <h1 class="normal-font mm-sl-title">${ nameInput }</h1>
             <div class="mm-sl-buttons">
-                <button class="normal-font mm-sl-button-2" onclick="loadNote('${{ d }}', '${{ data_PK }}')" id="mm-buttons">Load</button>
-
-                <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
+              <button class="normal-font mm-sl-button-2" onclick="loadNote('${data.name}', '${data_PK}')" style="background-color: gray;" disabled=true id="mm-buttons">Load</button>
+              <button class="normal-font mm-sl-button-3" onclick="deleteNode('${data_PK}')" style="background-color: gray;" disabled=true id="mm-buttons">Delete</button>
             </div>
           </div>
         `;
@@ -300,5 +298,3 @@ function addNode() {
   });
   diagram.commitTransaction("addNode");
 }
-
-listAllMindMaps()
