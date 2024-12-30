@@ -215,9 +215,7 @@ function deleteNote() {
 
   if (mindmapName) {
     console.log(mindmapName);
-    fetch(`/delete/${mindmapName}/`, {
-      method: "DELETE",
-    })
+    fetch(`/delete/${mindmapName}/`)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
