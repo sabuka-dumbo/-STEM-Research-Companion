@@ -738,5 +738,15 @@
 }
 
 @media screen and (max-width: 1200px) {
-    
+    #mindmapName {
+        width: calc(100% - 30px);
+    }
+
+    .mindmap-control-buttons {
+        padding-bottom: 60px;
+    }
+
+    .mm-save-child {
+        bottom: 0px;
+    }
 }
