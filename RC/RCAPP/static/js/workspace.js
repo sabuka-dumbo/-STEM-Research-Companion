@@ -109,12 +109,12 @@ notify_icon.addEventListener("click", function() {
 
 
 
-// Initialize the GoJS diagram
 let diagram = null;
 document.addEventListener("DOMContentLoaded", () => {
   diagram = go.GraphObject.make(go.Diagram, "mindmap", {
-    "undoManager.isEnabled": true, // Enable undo/redo
+    "undoManager.isEnabled": true,
     layout: go.GraphObject.make(go.TreeLayout, { angle: 90, layerSpacing: 40 }),
+    initialContentAlignment: go.Spot.Center,
   });
 
   // Define node template
@@ -126,8 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
       strokeWidth: 0,
     }),
     go.GraphObject.make(go.TextBlock, {
-      margin: 10,
-      editable: true, // Allow users to edit text
+      margin: 8,
+      editable: true,
     },
     new go.Binding("text", "key"))
   );
@@ -139,44 +139,31 @@ document.addEventListener("DOMContentLoaded", () => {
     go.GraphObject.make(go.Shape, { strokeWidth: 3, stroke: "#555" })
   );
 
-  // Initialize the model
-  diagram.model = new go.TreeModel([
-    { key: "Root", color: "lightblue" },
-  ]);
+  // Initialize with a simple root node
+  diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue" }]);
 });
 
-// Function to add a node
-function addNode() {
-  const selectedNode = diagram.selection.first();
-  if (!selectedNode) {
-    alert("Please select a node to add a child.");
+// Save mind map with a specific name
+function saveMap() {
+  const nameInput = document.getElementById("mindmapName").value;
+  if (!nameInput) {
+    alert("Please enter a name for the mind map.");
     return;
   }
-  const newNodeKey = `Node ${diagram.model.nodeDataArray.length + 1}`;
-  diagram.startTransaction("addNode");
-  diagram.model.addNodeData({
-    key: newNodeKey,
-    parent: selectedNode.data.key,
-    color: "lightblue",
-  });
-  diagram.commitTransaction("addNode");
-}
 
-// Function to save the diagram
-function saveMap() {
   const savedData = diagram.model.toJson();
-  localStorage.setItem("mindMapData", savedData);
-  alert("Mind map saved!");
+  localStorage.setItem(nameInput, savedData);
+  alert(`Mind map "${nameInput}" saved!`);
 }
 
-// Function to load the diagram
-function loadMap() {
-  const savedData = localStorage.getItem("mindMapData");
+// Load a mind map by its name or ID
+function loadNote(noteId) {
+  const savedData = localStorage.getItem(noteId);
   if (savedData) {
     diagram.model = go.Model.fromJson(savedData);
-    alert("Mind map loaded!");
+    alert(`Mind map "${noteId}" loaded!`);
   } else {
-    alert("No saved mind map found.");
+    alert(`No mind map found with the name "${noteId}".`);
   }
 }
 
