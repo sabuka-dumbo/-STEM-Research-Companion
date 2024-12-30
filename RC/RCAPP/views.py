@@ -24,6 +24,9 @@ def workspace(request, PID):
         project = Project.objects.all().filter(id=PID)
     else:
         return redirect('index')
+    
+    print(project)
+
 
     return render(request, "workspace.html")
 
