@@ -199,7 +199,7 @@ function loadNote(Name) {
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
         mm_lock();
         document.getElementById("mindmapName").value = Name;
-        document.getElementById("mindmapName").
+        document.getElementById('mindmapName').setAttribute('readonly', true);
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
