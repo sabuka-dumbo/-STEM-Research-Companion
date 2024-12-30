@@ -47,3 +47,11 @@ class Project(models.Model):
 
     def __str__(self):
         return "${self.project_name}"
+    
+class Mindmap(models.Model):
+    name = models.CharField(max_length=255)
+    data = models.TextField()
+    research = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="reasearchs_mindmap")
+
+    def __str__(self):
+        return f"${self.name} mindmap in ${self.research}"
