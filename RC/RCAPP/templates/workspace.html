@@ -190,13 +190,14 @@
 
     <div class="working_area">
         <div class="mm-div">
-            <h1 class="mm-title-gen big-font">Mindmap: Name of Mindmap</h1>
+            <h1 class="mm-title-gen big-font" id="mm-name">Mindmap</h1>
 
             <div id="mindmap"></div>
 
             <div class="mindmap-control-buttons">
                 <input type="text" id="mindmapName" class="normal-font" placeholder="Enter mind map name" />
                 <button onclick="addNode()" class="mm-add-child normal-font">Add child</button>
+                <button onclick="saveNode()" class="mm-save-child normal-font">Save</button>
             </div>
 
             <div class="mm-loads">
@@ -207,11 +208,9 @@
                 {% if mindmaps != 0 %}
                     {% for i in mindmaps %}
                         <div class="mm-saved-list">
-                            <h1 class="normal-font mm-sl-title">Saved mindmap name</h1>
+                            <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
 
                             <div class="mm-sl-buttons">
-                                <button class="normal-font mm-sl-button-1" onclick="saveMap()">Save</button>
-
                                 <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`)">Load</button>
 
                                 <button class="normal-font mm-sl-button-3" onclick="deleteNode()">Delete</button>

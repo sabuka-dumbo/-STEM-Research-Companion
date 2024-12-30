@@ -566,25 +566,10 @@
     height: 80%;
 }
 
-.mm-sl-button-1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 100%;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border: none;
-    background-color: #A5B68D;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .mm-sl-button-2 {
     position: absolute;
     top: 0;
-    right: 70px;
+    right: 0px;
     width: 60px;
     height: 100%;
     padding-top: 2px;
@@ -599,7 +584,7 @@
 .mm-sl-button-3 {
     position: absolute;
     top: 0;
-    right: 140px;
+    right: 70px;
     width: 80px;
     height: 100%;
     padding-top: 2px;
@@ -644,7 +629,7 @@
 .mm-add-child {
     position: absolute;
     top: 5px;
-    right: 0px;
+    right: 110px;
     width: 120px;
     height: max-content;
     color: white;
@@ -655,6 +640,24 @@
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
+}
+
+.mm-save-child {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 100px;
+    height: max-content;
+    color: white;
+    background-color: #A5B68D;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.432);
 }
 

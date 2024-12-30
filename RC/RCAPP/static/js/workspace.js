@@ -171,6 +171,7 @@ function loadNote(Name) {
         alert(`Error: ${data.error}`);
       } else {
         diagram.model = go.Model.fromJson(data.data);
+        document.getElementById("mm-name").innerText = "Mindmap: " + Name;
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
