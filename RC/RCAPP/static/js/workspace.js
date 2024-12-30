@@ -166,6 +166,13 @@ function mm_lock() {
   const mm_lock_back = document.getElementById("mm-lock");
 
   mm_lock_back.style.display = "block";
+  mm_lock_back.style.animation = "fade_in 1s ease";
+
+  mm_lock_back.addEventListener("animationend", function() {
+    mm_lock_back.style.animation = '';
+    mm_lock_back.style.display = "block";
+    mm_lock_back.style.opacity = "100%";
+  })
 }
 
 function loadNote(Name) {
