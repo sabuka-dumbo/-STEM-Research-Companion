@@ -211,9 +211,9 @@
                             <h1 class="normal-font mm-sl-title">{{ i.name }}</h1>
 
                             <div class="mm-sl-buttons">
-                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`)">Load</button>
+                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`)" id="mm-buttons">Load</button>
 
-                                <button class="normal-font mm-sl-button-3" onclick="deleteNode()">Delete</button>
+                                <button class="normal-font mm-sl-button-3" onclick="deleteNode()" id="mm-buttons">Delete</button>
                             </div>
                         </div>
                     {% endfor %}
