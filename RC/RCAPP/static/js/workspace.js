@@ -162,6 +162,19 @@ function saveMap() {
     });
 }
 
+function disableAllButtons() {
+  const buttons = document.querySelectorAll(".mm-buttons");
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
+}
+
+function enableAllButtons() {
+  const buttons = document.querySelectorAll(".mm-buttons");
+  buttons.forEach((button) => {
+    button.disabled = false;
+  });
+}
 
 function loadNote(Name) {
   fetch(`/load/${Name}`)
@@ -172,7 +185,7 @@ function loadNote(Name) {
       } else {
         diagram.model = go.Model.fromJson(data.data);
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
-        document.getElementById("mm-buttons").disabled = true;
+        disableAllButtons();
         alert(`Mind map "${data.name}" loaded!`);
       }
     })
