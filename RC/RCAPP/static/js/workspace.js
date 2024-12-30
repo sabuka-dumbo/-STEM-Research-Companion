@@ -163,8 +163,8 @@ function saveMap() {
 }
 
 
-function loadNote(noteId) {
-  fetch(`/load/?name=${encodeURIComponent(noteId)}`)
+function loadNote(Name) {
+  fetch(`/load/${Name}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
