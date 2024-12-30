@@ -203,18 +203,23 @@
                 <h1 class="big-font mm-title">Saved mindmaps:</h1>
 
                 <hr class="mm-line">
+                
+                {% if mindmaps != 0 %}
+                    {% for i in mindmaps %}
+                        <div class="mm-saved-list">
+                            <h1 class="normal-font mm-sl-title">Saved mindmap name</h1>
 
-                <div class="mm-saved-list">
-                    <h1 class="normal-font mm-sl-title">Saved mindmap name</h1>
+                            <div class="mm-sl-buttons">
+                                <button class="normal-font mm-sl-button-1" onclick="saveMap()">Save</button>
 
-                    <div class="mm-sl-buttons">
-                        <button class="normal-font mm-sl-button-1" onclick="saveMap()">Save</button>
+                                <button class="normal-font mm-sl-button-2" onclick="loadNote(`{{ i.name }}`)">Load</button>
 
-                        <button class="normal-font mm-sl-button-2" onclick="loadNote('OK')">Load</button>
-
-                        <button class="normal-font mm-sl-button-3" onclick="deleteNode()">Delete</button>
-                    </div>
-                </div>
+                                <button class="normal-font mm-sl-button-3" onclick="deleteNode()">Delete</button>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                {% endif %}
             </div>
 
             <br>
