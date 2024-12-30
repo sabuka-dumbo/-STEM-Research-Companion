@@ -198,14 +198,7 @@ function listAllMindMaps() {
     .then((response) => response.json())
     .then((data) => {
       const savedMindMaps = document.getElementById("saved-mindmaps");
-      savedMindMaps.innerHTML = "<h3>Saved Mind Maps</h3>";
-
-      data.mindmaps.forEach((map) => {
-        const button = document.createElement("button");
-        button.textContent = `Load ${map.name}`;
-        button.onclick = () => loadNote(map.name);
-        savedMindMaps.appendChild(button);
-      });
+      console.log(savedMindMaps)
     })
     .catch((error) => {
       console.error("Error listing mind maps:", error);

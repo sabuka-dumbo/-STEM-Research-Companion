@@ -47,3 +47,7 @@ def load_mindmap(request):
             return JsonResponse({"name": mindmap.name, "data": mindmap.data})
         except Mindmap.DoesNotExist:
             return JsonResponse({"error": "Mind map not found"}, status=404)
+        
+def list_mindmaps(request):
+    mindmaps = Mindmap.objects.all().values("name")  # Fetch all mind map names
+    return JsonResponse({"mindmaps": list(mindmaps)})

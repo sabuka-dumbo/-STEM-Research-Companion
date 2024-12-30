@@ -11,4 +11,5 @@ urlpatterns = [
     ## fetchs
     path("save/", views.save_mindmap, name="save_mindmap"),
     path("load/", views.load_mindmap, name="load_mindmap"),
+    path("list/", views.list_mindmaps, name="list_mindmaps"),
 ]
