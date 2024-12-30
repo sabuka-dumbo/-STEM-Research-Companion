@@ -827,7 +827,6 @@
         top: 0%;
         transform: translateY(0);
         width: 100%;
-        background-color: #ECDFCC;
         height: max-content;
         grid-column-start: 1;
         grid-column-end: 3;
