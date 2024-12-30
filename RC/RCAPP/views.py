@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import MindMap
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -19,3 +20,30 @@ def info(request):
 
 def workspace(request, PID):
     return render(request, "workspace.html")
+
+
+@csrf_exempt
+def save_mindmap(request):
+    if request.method == "POST":
+        body = json.loads(request.body)
+        name = body.get("name")
+        data = body.get("data")
+
+        if not name or not data:
+            return JsonResponse({"error": "Name and data are required"}, status=400)
+
+        mindmap, created = Mindmap.objects.update_or_create(name=name, defaults={"data": data})
+        return JsonResponse({"message": "Mind map saved", "created": created})
+
+@csrf_exempt
+def load_mindmap(request):
+    if request.method == "GET":
+        name = request.GET.get("name")
+        if not name:
+            return JsonResponse({"error": "Name is required"}, status=400)
+
+        try:
+            mindmap = Mindmap.objects.get(name=name)
+            return JsonResponse({"name": mindmap.name, "data": mindmap.data})
+        except Mindmap.DoesNotExist:
+            return JsonResponse({"error": "Mind map not found"}, status=404)
