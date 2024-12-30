@@ -29,6 +29,7 @@ def workspace(request, PID):
     mindmaps = Mindmap.objects.filter(research=project)
 
     return render(request, "workspace.html", {
+        "project_info": project,
         "mindmaps": mindmaps,
     })
 
