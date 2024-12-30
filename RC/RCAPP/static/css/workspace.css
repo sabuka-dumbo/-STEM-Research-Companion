@@ -553,8 +553,6 @@
     color: black;
     padding: 0;
     margin: 0;
-    grid-template-columns: 1;
-    grid-template-rows: 1;
 }
 
 .mm-sl-buttons {
@@ -815,6 +813,22 @@
     .mm-add-child {
         width: 48%;
         margin-left: 1%;
+    }
+
+    .mm-sl-title {
+        position: relative;
+        top: 0%;
+        transform: translateY(0);
+        width: 100%;
+        background-color: #ECDFCC;
+        height: max-content;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: inline;
+    }
+
+    .mm-saved-list {
+        height: 150px;
     }
 }
 
