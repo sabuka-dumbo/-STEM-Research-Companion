@@ -82,6 +82,7 @@ html, body{
     color: white;
     font-weight: bold;
     margin-top: 10vh;
+    width: 70%;
 }
 .text-box p{
     font-size: 2em;

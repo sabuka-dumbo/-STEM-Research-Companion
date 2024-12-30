@@ -20,12 +20,13 @@ def info(request):
 
 def workspace(request, PID):
     ## Find project and find it's own mindmaps
-    if (Project.objects.all().filter(id=PID).exists()):
-        project = Project.objects.all().filter(id=PID)
-    else:
+    project = Project.objects.filter(id=PID).first()
+
+    # If no project is found, redirect to index page
+    if not project:
         return redirect('index')
     
-    mindmaps = Mindmap.objects.all().filter(research=project)
+    mindmaps = Mindmap.objects.filter(research=project)
 
     return render(request, "workspace.html", {
         "mindmaps": mindmaps,
