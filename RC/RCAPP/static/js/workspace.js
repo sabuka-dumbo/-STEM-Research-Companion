@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
     go.GraphObject.make(go.Shape, { strokeWidth: 3, stroke: "#555" })
   );
 
-  // Initialize with a simple root node
   diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue" }]);
 });
 
@@ -169,10 +168,10 @@ function loadNote(noteId) {
 
 // Function to delete the selected node or link
 function deleteNode() {
-  const selectedPart = diagram.selection.first(); // Get the first selected part
+  const selectedPart = diagram.selection.first();
   if (selectedPart) {
     diagram.startTransaction("deleteNode");
-    diagram.remove(selectedPart); // Remove the selected part (node or link)
+    diagram.remove(selectedPart);
     diagram.commitTransaction("deleteNode");
     alert("Deleted selected item.");
   } else {
@@ -186,6 +185,23 @@ function listAllMindMaps() {
     const key = localStorage.key(i);
     console.log(key);
   }
+}
+
+// Function to add a node
+function addNode() {
+  const selectedNode = diagram.selection.first();
+  if (!selectedNode) {
+    alert("Please select a node to add a child.");
+    return;
+  }
+  const newNodeKey = `Node ${diagram.model.nodeDataArray.length + 1}`;
+  diagram.startTransaction("addNode");
+  diagram.model.addNodeData({
+    key: newNodeKey,
+    parent: selectedNode.data.key,
+    color: "lightblue",
+  });
+  diagram.commitTransaction("addNode");
 }
 
 listAllMindMaps()
