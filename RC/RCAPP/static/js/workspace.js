@@ -212,15 +212,31 @@ function loadNote(Name) {
 
 function deleteNote() {
   const selectedPart = diagram.selection.first();
-  name_of_mindmap = document.getElementById("mindmapName").value;
+  const mindmapName = document.getElementById("mindmapName").value;
 
   if (selectedPart) {
     diagram.startTransaction("deleteNode");
     diagram.remove(selectedPart);
     diagram.commitTransaction("deleteNode");
     alert("Deleted selected item.");
+  } else if (mindmapName) {
+    fetch(`/delete/${mindmapName}`, { method: "DELETE" })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          alert(`Error: ${data.error}`);
+        } else {
+          alert(`Mind map "${mindmapName}" deleted successfully!`);
+          diagram.model = new go.TreeModel([]);
+          document.getElementById("mindmapName").value = "";
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting mind map:", error);
+        alert("Failed to delete the mind map.");
+      });
   } else {
-    alert("No node or link selected.");
+    alert("No node selected or mindmap name provided for deletion.");
   }
 }
 
