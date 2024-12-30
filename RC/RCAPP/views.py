@@ -25,15 +25,28 @@ def workspace(request, PID):
 @csrf_exempt
 def save_mindmap(request):
     if request.method == "POST":
-        body = json.loads(request.body)
-        name = body.get("name")
-        data = body.get("data")
+        try:
+            body = json.loads(request.body)
+            name = body.get("name")
+            data = body.get("data")
 
-        if not name or not data:
-            return JsonResponse({"error": "Name and data are required"}, status=400)
+            if not name or not data:
+                return JsonResponse({"error": "Name and data are required"}, status=400)
 
-        mindmap, created = Mindmap.objects.update_or_create(name=name, defaults={"data": data}, research=Project.objects.all().get(project_name="sda"))
-        return JsonResponse({"message": "Mind map saved", "created": created})
+            try:
+                project = Project.objects.get(project_name="sda")
+            except Project.DoesNotExist:
+                return JsonResponse({"error": "Project not found"}, status=404)
+
+            mindmap, created = Mindmap.objects.update_or_create(
+                name=name,
+                defaults={"data": data, "research": project}
+            )
+            return JsonResponse({"message": "Mind map saved", "created": created})
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON"}, status=400)
+
 
 @csrf_exempt
 def load_mindmap(request):
