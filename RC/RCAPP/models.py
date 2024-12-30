@@ -9,19 +9,19 @@ class Categories(models.Model):
     category = models.CharField(max_length=150)
 
     def __str__(self):
-        return "${self.category} category"
+        return f"{self.category} category"
 
 class Status(models.Model):
     status = models.CharField(max_length=150)
 
     def __str__(self):
-        return "${self.status} status"
+        return f"{self.status} status"
 
 class Visibility(models.Model):
     visibility = models.CharField(max_length=150)
 
     def __str__(self):
-        return "${self.visibility} visibility"
+        return f"{self.visibility} visibility"
 
 
 class Project(models.Model):
@@ -46,7 +46,7 @@ class Project(models.Model):
     favorite_count = models.ManyToManyField(User, related_name="favorite_count")
 
     def __str__(self):
-        return "${self.project_name}"
+        return f"{self.project_name}"
     
 class Mindmap(models.Model):
     name = models.CharField(max_length=255)
@@ -54,4 +54,4 @@ class Mindmap(models.Model):
     research = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="reasearchs_mindmap")
 
     def __str__(self):
-        return f"${self.name} mindmap in ${self.research}"
+        return f"{self.name} mindmap in {self.research}"

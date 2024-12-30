@@ -25,9 +25,11 @@ def workspace(request, PID):
     else:
         return redirect('index')
     
+    mindmaps = Mindmap.objects.all().filter(research=project)
 
-
-    return render(request, "workspace.html")
+    return render(request, "workspace.html", {
+        "mindmaps": mindmaps,
+    })
 
 
 @csrf_exempt
