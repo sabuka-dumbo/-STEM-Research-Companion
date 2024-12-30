@@ -75,12 +75,11 @@ def list_mindmaps(request):
     return JsonResponse({"mindmaps": list(mindmaps)})
 
 @csrf_exempt
-def delete_mindmap(request, name):
-    if request.method == "DELETE":
-        try:
-            mindmap = Mindmap.objects.get(name=name)
-            mindmap.delete()
-            return JsonResponse({"message": f"Mind map '{name}' deleted successfully."})
-        except Mindmap.DoesNotExist:
-            return JsonResponse({"error": "Mind map not found."}, status=404)
-    return JsonResponse({"error": "Invalid request method."}, status=400)
+def delete_mindmap(request, MN):
+    print(MN)
+    try:
+        mindmap = Mindmap.objects.get(name=MN)
+        mindmap.delete()
+        return JsonResponse({"message": f"Mind map '{MN}' deleted successfully."})
+    except Mindmap.DoesNotExist:
+        return JsonResponse({"error": "Mind map not found."}, status=404)

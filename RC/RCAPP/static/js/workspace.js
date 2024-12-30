@@ -214,7 +214,8 @@ function deleteNote() {
   const mindmapName = document.getElementById("mindmapName").value;
 
   if (mindmapName) {
-    fetch(`/delete/${mindmapName}`, { method: "DELETE" })
+    console.log(mindmapName)
+    fetch(`/delete/${mindmapName}/`)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
