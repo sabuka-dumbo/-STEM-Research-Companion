@@ -76,7 +76,6 @@ def list_mindmaps(request):
 
 @csrf_exempt
 def delete_mindmap(request, PNAME):
-    print(PNAME)
     try:
         mindmap = Mindmap.objects.get(name=PNAME)
         mindmap.delete()

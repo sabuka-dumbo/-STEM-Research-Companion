@@ -224,6 +224,7 @@ function deleteNote() {
           alert(`Mind map "${mindmapName}" deleted successfully!`);
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
+          mm_unlock();
         }
       })
       .catch((error) => {
