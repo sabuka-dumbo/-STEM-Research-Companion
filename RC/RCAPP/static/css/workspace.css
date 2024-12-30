@@ -766,7 +766,6 @@
 @media screen and (max-width: 740px) {
     .mindmap-control-buttons {
         padding-bottom: 120px;
-        background-color: #DA8359;
     }
 
     .mm-save-child {
@@ -820,6 +819,10 @@
 }
 
 @media screen and (max-width: 505px) {
+    #mindmapName {
+        font-size: 20px;
+    }
+
     .mm-save-child {
         font-size: 15px;
         padding-top: 12px;
@@ -842,5 +845,57 @@
         font-size: 15px;
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #mindmapName {
+        font-size: 17px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .mindmap-control-buttons {
+        padding-bottom: 240px;
+    }
+
+    .mm-save-child {
+        top: 65px;
+        width: 100%;
+        left: 0;
+        font-size: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 0%;
+    }
+
+    .mm-add-child {
+        top: 120px;
+        width: 100%;
+        left: 0;
+        font-size: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 0%;
+    }
+
+    .mm-cancel-child {
+        top: 175px;
+        width: 100%;
+        left: 0;
+        font-size: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 0%;
+    }
+
+    .mm-delete-child {
+        top: 230px;
+        width: 100%;
+        left: 0;
+        font-size: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 0%;
     }
 }
