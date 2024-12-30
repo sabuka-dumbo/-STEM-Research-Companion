@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
+import json
+from .models import MindMap
 
 # Create your views here.
 def index(request):
