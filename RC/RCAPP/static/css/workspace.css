@@ -839,6 +839,21 @@
         grid-row: 2;
         grid-column-start: 1;
         grid-column-end: 3;
+        left: 0;
+        width: 100%;
+        display: inline-grid;
+    }
+
+    .mm-sl-button-2 {
+        width: 49%;
+        margin-right: 1%;
+        left: 0px;
+    }
+
+    .mm-sl-button-3 {
+        width: 49%;
+        margin-left: 1%;
+        right: 0px;
     }
 }
 
