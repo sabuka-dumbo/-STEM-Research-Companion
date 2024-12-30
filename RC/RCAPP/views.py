@@ -49,17 +49,14 @@ def save_mindmap(request):
 
 
 @csrf_exempt
-def load_mindmap(request):
-    if request.method == "GET":
-        name = request.GET.get("name")
-        if not name:
-            return JsonResponse({"error": "Name is required"}, status=400)
+def load_mindmap(name):
+    ## add filtering with research id later
 
-        try:
-            mindmap = Mindmap.objects.get(name=name)
-            return JsonResponse({"name": mindmap.name, "data": mindmap.data})
-        except Mindmap.DoesNotExist:
-            return JsonResponse({"error": "Mind map not found"}, status=404)
+    try:
+        mindmap = Mindmap.objects.all().get(name=Name)
+        return JsonResponse({"name": mindmap.name, "data": mindmap.data})
+    except Mindmap.DoesNotExist:
+        return JsonResponse({"error": "Mind map not found"}, status=404)
         
 def list_mindmaps(request):
     mindmaps = Mindmap.objects.all().values("name")  # Fetch all mind map names
