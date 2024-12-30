@@ -744,9 +744,22 @@
 
     .mindmap-control-buttons {
         padding-bottom: 60px;
+        background-color: #DA8359;
     }
 
     .mm-save-child {
-        bottom: 0px;
+        top: calc(100% - 40px);
+    }
+
+    .mm-delete-child {
+        top: calc(100% - 40px);
+    }
+
+    .mm-cancel-child {
+        top: calc(100% - 40px);
+    }
+
+    .mm-add-child {
+        top: calc(100% - 40px);
     }
 }
