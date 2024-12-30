@@ -212,6 +212,8 @@ function loadNote(Name) {
 
 function deleteNote() {
   const selectedPart = diagram.selection.first();
+  name_of_mindmap = document.getElementById("mindmapName").value;
+
   if (selectedPart) {
     diagram.startTransaction("deleteNode");
     diagram.remove(selectedPart);
