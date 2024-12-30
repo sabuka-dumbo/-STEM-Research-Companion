@@ -549,12 +549,13 @@
     transform: translateY(-50%);
     left: 0;
     width: 60%;
-    height: 30px;
+    height: 40px;
     color: black;
     padding: 0;
     margin: 0;
     overflow-y: hidden;
     overflow-x: auto;
+    white-space: nowrap;
 }
 
 .mm-sl-buttons {
