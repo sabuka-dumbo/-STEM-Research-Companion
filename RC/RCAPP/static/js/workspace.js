@@ -195,6 +195,9 @@ function mm_unlock() {
 
   mm_lock_back.style.display = "block";
   mm_lock_back.style.animation = "fade_out 1s ease";
+  document.getElementById('mindmapName').setAttribute('readonly', false);
+  document.getElementById("mindmapName").value = '';
+  document.getElementById("mm-name").innerText = "Mindmap: New";
 
   mm_lock_back.addEventListener("animationend", function() {
     mm_lock_back.style.animation = '';
@@ -228,6 +231,11 @@ function loadNote(Name, MPK) {
 
 function clear_mm() {
   diagram.model = new go.TreeModel([{ key: "Root", color: "lightblue", text: "Root" }]);
+}
+
+function cancelNote() {
+  clear_mm();
+  mm_unlock();
 }
 
 function deleteNote() {
