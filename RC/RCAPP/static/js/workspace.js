@@ -290,8 +290,6 @@ function deleteNote2(name, id) {
   }
 }
 
-
-
 function listAllMindMaps() {
   fetch("/list/")
     .then((response) => response.json())
