@@ -158,6 +158,7 @@ function saveMap() {
         notification("Sorry, there was some problem:", data.error);
       } else {
         clear_mm();
+        mm_unlock();
       
         let data_PK = data.mm_pk;
       
