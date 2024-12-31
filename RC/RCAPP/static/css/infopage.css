@@ -118,7 +118,7 @@ html, body{
 .STEM-pic{
     width: 40%;
     height: 40%;
-    margin-top: 10vh;
+    padding-top: 10vh;
 }
 .empty{
     background-color: rgb(88, 71, 124);

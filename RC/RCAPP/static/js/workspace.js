@@ -5,6 +5,14 @@ const span2 = document.getElementById("span2");
 const span3 = document.getElementById("span3");
 const navbar2 = document.getElementById("navbar-main-part");
 
+const mm_div = document.getElementById("mm-div");
+const mm_link = document.getElementById("mm-link");
+
+function open_mm() {
+  mm_div.style.display = "block";
+  mm_link.style.color = "gray"
+}
+
 let current_name = "";
 let current_id = 0;
 
