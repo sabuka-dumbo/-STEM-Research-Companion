@@ -10,7 +10,7 @@ const mm_link = document.getElementById("mm-link");
 
 function open_mm() {
   mm_div.style.display = "block";
-  mm_link.style.color = "gray"
+  mm_link.style.color = "#DA8359"
 }
 
 let current_name = "";
