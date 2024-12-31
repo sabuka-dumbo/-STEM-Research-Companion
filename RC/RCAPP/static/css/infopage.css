@@ -195,28 +195,19 @@ html, body{
     max-width: 30%;
 }
 
-@media (max-width: 940px){
+
+@media (max-width: 450px){
     .login-btn{
         display: none;
     }
-    .login-icon{
-        display: none;
-        width: 20vw;
-    }
+    
     .navbar ul li{
         margin: 0;
     }
     .navbar{
         width: 100%;
     }
-    #card{
-        flex: 1 1 calc(50% - 40px);
-    }
-}
-@media (max-width: 450px){
-    .login-btn{
-        display: none;
-    }
+    
     .login-icon{
         display: flex;
         width: 20vw;

@@ -137,8 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function saveMap() {
   const nameInput = document.getElementById("mindmapName").value;
+
   if (!nameInput) {
-    alert("Please enter a name for the mind map.");
+    notification("Sorry, there was some problem with mindmap's name.");
     return;
   }
 
@@ -154,7 +155,7 @@ function saveMap() {
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
-        alert(`Error: ${data.error}`);
+        notification("Sorry, there was some problem:", data.error);
       } else {
         clear_mm();
       
@@ -172,8 +173,7 @@ function saveMap() {
       }
     })
     .catch((error) => {
-      console.error("Error saving mind map:", error);
-      alert("Failed to save mind map.");
+      notification("Sorry, there was some problem. Failed to save mind map");
     });
 }
 
@@ -211,7 +211,7 @@ function loadNote(Name, MPK) {
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
-        alert(`Error: ${data.error}`);
+        notification("Sorry, there was some problem:" + data.error);
       } else {
         diagram.model = go.Model.fromJson(data.data);
         document.getElementById("mm-name").innerText = "Mindmap: " + Name;
@@ -220,12 +220,11 @@ function loadNote(Name, MPK) {
         document.getElementById('mindmapName').setAttribute('readonly', true);
         current_id = MPK;
         current_name = Name;
-        console.log(current_id, current_name)
       }
     })
     .catch((error) => {
       console.error("Error loading mind map:", error);
-      alert("Failed to load mind map.");
+      notification("Sorry, there was some problem. Couldn't load mind map.")
     });
 }
 
@@ -247,7 +246,7 @@ function deleteNote() {
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
-          alert(`Error: ${data.error}`);
+          notification("Sorry, there was some problem. " + data.error);
         } else {
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
@@ -257,11 +256,10 @@ function deleteNote() {
         }
       })
       .catch((error) => {
-        console.error("Error deleting mind map:", error);
-        alert("Failed to delete the mind map.");
+        notification("Sorry, failed to delete the mind map");
       });
   } else {
-    alert("No mindmap name provided for deletion.");
+    notification("Sorry, no mindmap name provided for deletion.");
   }
 }
 
@@ -282,11 +280,10 @@ function deleteNote2(name, id) {
         }
       })
       .catch((error) => {
-        console.error("Error deleting mind map:", error);
-        alert("Failed to delete the mind map.");
+        notification("Sorry, failed to delete the mindmap");
       });
   } else {
-    alert("No mindmap name provided for deletion.");
+    notification("Sorry, no mindmap name provided for dletion.")
   }
 }
 
@@ -313,7 +310,7 @@ function listAllMindMaps() {
 function addNode() {
   const selectedNode = diagram.selection.first();
   if (!selectedNode) {
-    alert("Please select a node to add a child.");
+    notification("Please select a node to add a child.");
     return;
   }
 
