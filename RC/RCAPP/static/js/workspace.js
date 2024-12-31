@@ -81,7 +81,7 @@ const notify_text = document.getElementById("notify_text");
 const notify_icon = document.getElementById("notify_icon");
 
 function notification(text) {
-    notify_text.value = text;
+    notify_text.innerText = text;
 
     notify_div.style.display = "block";
     notify_div.style.animation = "notify_div_animation_open 1s ease";
@@ -274,12 +274,10 @@ function deleteNote2(name, id) {
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
-          alert(`Error: ${data.error}`);
         } else {
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
           document.getElementById(id).remove();
-          mm_unlock();
           clear_mm();
         }
       })
