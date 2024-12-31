@@ -251,3 +251,13 @@ html, body{
         flex: 1 1 calc(50% - 40px);
     }
 }
+@media (max-width: 613px){
+    .login-btn{
+        display: none;
+    }
+    .login-icon{
+        display: flex;
+        width: 10vw;
+        height: auto;
+    }
+}
