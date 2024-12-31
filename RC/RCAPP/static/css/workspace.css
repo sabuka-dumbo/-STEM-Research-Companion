@@ -768,7 +768,7 @@
     height: max-content;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: #DA8359;
+    background-color: #eeff05;
     display: grid;
     grid-template-columns: 50% 3% 47%;
     grid-template-rows: 1;
@@ -784,7 +784,7 @@
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #fc8037;
+    background-color: #cf7744;
     grid-column: 1;
     grid-row: 1;
 }
