@@ -24,6 +24,29 @@ function open_mm() {
   mm_link2.style.color = "#DA8359"
 }
 
+const charts_div = document.getElementById("charts-div");
+const charts_link1 = document.getElementById("charts-link1")
+const charts_link2 = document.getElementById("charts-link2");
+const navbar_navs_charts = document.getElementById("navbar-navs-charts");
+
+function open_charts() {
+  navbar_navs_charts.innerHTML = `
+   <h1 class="navbar-line" id="charts-link2">|</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart-fill navbar-icon" viewBox="0 0 16 16">
+      <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778zM8.5.015V7.5h7.485A8 8 0 0 0 8.5.015"/>
+    </svg>
+    <h1 class="navbar-nav normal-font">Charts</h1>
+  `;
+
+  charts_div.style.display = "block";
+  charts_link1.style.color = "#DA8359"
+  charts_link2.style.color = "#DA8359"
+}
+
+function close_all_divs() {
+  
+}
+
 let current_name = "";
 let current_id = 0;
 
