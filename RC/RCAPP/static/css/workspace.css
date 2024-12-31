@@ -785,6 +785,7 @@
     padding-bottom: 5px;
     background-color: white;
     grid-column: 1;
+    text-shadow: 0px 4px 25px rgba(226, 226, 226, 0.806);
     grid-row: 1;
 }
 
@@ -800,6 +801,7 @@
     padding-bottom: 5px;
     background-color: #6f9638;
     grid-column: 3;
+    text-shadow: 0px 4px 25px rgba(226, 226, 226, 0.806);
     grid-row: 1;
 }
 
