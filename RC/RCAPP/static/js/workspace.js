@@ -265,6 +265,33 @@ function deleteNote() {
   }
 }
 
+function deleteNote() {
+  let mindmapName = document.getElementById("mindmapName").value;
+
+  if (mindmapName) {
+    console.log(mindmapName);
+    fetch(`/delete/${mindmapName}/`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          alert(`Error: ${data.error}`);
+        } else {
+          diagram.model = new go.TreeModel([]);
+          document.getElementById("mindmapName").value = "";
+          document.getElementById(current_id).remove();
+          mm_unlock();
+          clear_mm();
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting mind map:", error);
+        alert("Failed to delete the mind map.");
+      });
+  } else {
+    alert("No mindmap name provided for deletion.");
+  }
+}
+
 
 
 function listAllMindMaps() {
