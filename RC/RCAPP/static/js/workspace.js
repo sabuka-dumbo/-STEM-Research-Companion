@@ -265,7 +265,7 @@ function deleteNote() {
   }
 }
 
-function deleteNote2(name) {
+function deleteNote2(name, id) {
   let mindmapName = name;
 
   if (mindmapName) {
@@ -278,7 +278,7 @@ function deleteNote2(name) {
         } else {
           diagram.model = new go.TreeModel([]);
           document.getElementById("mindmapName").value = "";
-          document.getElementById(current_id).remove();
+          document.getElementById(id).remove();
           mm_unlock();
           clear_mm();
         }
