@@ -265,8 +265,8 @@ function deleteNote() {
   }
 }
 
-function deleteNote() {
-  let mindmapName = document.getElementById("mindmapName").value;
+function deleteNote2(name) {
+  let mindmapName = name;
 
   if (mindmapName) {
     console.log(mindmapName);
