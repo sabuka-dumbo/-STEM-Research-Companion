@@ -768,7 +768,6 @@
     height: max-content;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: #eeff05;
     display: grid;
     grid-template-columns: 50% 3% 47%;
     grid-template-rows: 1;
@@ -789,7 +788,7 @@
     grid-row: 1;
 }
 
-.cc-div1 {
+.cc-div2 {
     position: relative;
     top: 0;
     left: 0;
