@@ -241,3 +241,13 @@ html, body{
         margin-left: 10%;
     }
 }
+
+
+@media (max-width: 750px){
+    .STEM-pic{
+        display: none;
+    }
+    #card{
+        flex: 1 1 calc(50% - 20px);
+    }
+}

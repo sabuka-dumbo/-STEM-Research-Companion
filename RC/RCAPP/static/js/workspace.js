@@ -6,11 +6,13 @@ const span3 = document.getElementById("span3");
 const navbar2 = document.getElementById("navbar-main-part");
 
 const mm_div = document.getElementById("mm-div");
-const mm_link = document.getElementById("mm-link");
+const mm_link1 = document.getElementById("mm-link1")
+const mm_link2 = document.getElementById("mm-link2");
 
 function open_mm() {
   mm_div.style.display = "block";
-  mm_link.style.color = "#DA8359"
+  mm_link1.style.color = "#DA8359"
+  mm_link2.style.color = "#DA8359"
 }
 
 let current_name = "";
