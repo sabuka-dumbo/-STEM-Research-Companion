@@ -760,7 +760,49 @@
     margin-right: 5%;
 }
 
+.cc-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: max-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #DA8359;
+    display: grid;
+    grid-template-columns: 50% 3% 47%;
+    grid-template-rows: 1;
+}
 
+.cc-div1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fc8037;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.cc-div1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #6f9638;
+    grid-column: 3;
+    grid-row: 1;
+}
 
 @media screen and (max-width: 1200px) {
     #mindmapName {
