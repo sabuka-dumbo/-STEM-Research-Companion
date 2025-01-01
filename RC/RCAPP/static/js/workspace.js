@@ -357,7 +357,7 @@ const ctx = document.getElementById('myChart');
       labels: ['Red'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12],
         borderWidth: 1
       }]
     },
