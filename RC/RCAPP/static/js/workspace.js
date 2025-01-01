@@ -349,6 +349,8 @@ function addNode() {
 }
 
 let current_type = document.getElementById("cc-select").value;
+let current_back_color = document.getElementById("back_color").value;
+let current_border_color = document.getElementById("border_color").value;
 
 const ctx = document.getElementById('myChart');
 let chart = new Chart(ctx, {
@@ -358,9 +360,9 @@ let chart = new Chart(ctx, {
     datasets: [{
       label: '# of Votes',
       data: [12],
-      backgroundColor: 'rgb(255, 174, 192)',
+      backgroundColor: current_back_color,
       borderWidth: 1,
-      borderColor: 'rgb(227, 81, 113)'
+      borderColor: current_border_color
     }]
   },
   options: {
@@ -375,6 +377,8 @@ let chart = new Chart(ctx, {
 function change_chart() {
   const cc_select = document.getElementById("cc-select").value;
 
+  current_type = cc_select;
+
   chart.destroy();
   chart = new Chart(ctx, {
     type: cc_select,
@@ -383,7 +387,36 @@ function change_chart() {
       datasets: [{
         label: '# of Votes',
         data: [12],
-        backgroundColor: 'rgb(255, 99, 132)',
+        backgroundColor: current_back_color,
+        borderColor: current_border_color,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+function change_back_color() {
+  const cc_back_color = document.getElementById("back_color").value;
+
+  current_back_color = cc_back_color;
+
+  chart.destroy();
+  chart = new Chart(ctx, {
+    type: current_type,
+    data: {
+      labels: ['Red'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12],
+        backgroundColor: current_back_color,
+        borderColor: current_border_color,
         borderWidth: 1
       }]
     },
