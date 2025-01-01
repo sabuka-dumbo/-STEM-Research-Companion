@@ -777,15 +777,17 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 20px);
     height: max-content;
     padding: 0;
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: white;
     grid-column: 1;
-    text-shadow: 0px 4px 25px rgba(226, 226, 226, 0.806);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.432);
     grid-row: 1;
 }
 
@@ -793,16 +795,248 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 20px);
     height: max-content;
     padding: 0;
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #6f9638;
     grid-column: 3;
-    text-shadow: 0px 4px 25px rgba(226, 226, 226, 0.806);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.432);
     grid-row: 1;
+}
+
+.cc-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.cc-division {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 2.5% 47.5%;
+    grid-template-rows: 1;
+    margin-top: 10px;
+}
+
+.cc-division1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.cc-select {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.cc-division2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.cc-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column: 3;
+    grid-row: 2;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    margin-top: 10px;
+}
+
+.cc-line {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1.5px solid black;
+}
+
+.cc-division3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-column: 1;
+    grid-row: 3;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.cc-number-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column: 3;
+    grid-row: 3;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    margin-top: 10px;
+}
+
+.cc-division4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-column: 1;
+    grid-row: 4;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.cc-color-input1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    height: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column: 3;
+    grid-row: 4;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    margin-top: 10px;
+}
+
+.cc-division5 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-column: 1;
+    grid-row: 5;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.cc-color-input2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    height: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column: 3;
+    grid-row: 5;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    margin-top: 10px;
+}
+
+.cc-buttons-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-template-columns: 49% 2% 49%;
+    grid-template-rows: 1;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: grid;
+}
+
+.cc-button1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    grid-column: 1;
+    grid-row: 1;
+    border: none;
+    background-color: gainsboro;
+    color: black;
+}
+
+.cc-button2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    grid-column: 3;
+    grid-row: 1;
+    background-color: #A5B68D;
+    color: white;
+    border: none;
 }
 
 @media screen and (max-width: 1200px) {
