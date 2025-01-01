@@ -1260,8 +1260,21 @@
 
 @media screen and (max-width: 1100px) {
     .cc-div {
-        grid-template-columns: max-content;
-        grid-template-rows: 1 10px 1;
+        grid-template-columns: 100%;
+        grid-template-rows: max-content max-content;
+    }
+
+    .cc-div1 {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+
+    .cc-div2 {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 10px;
+        width: 100%;
     }
 }
 
