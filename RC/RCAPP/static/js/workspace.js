@@ -352,7 +352,7 @@ function addNode() {
 const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'bar',
+    type: 'pie',
     data: {
       labels: ['Red'],
       datasets: [{
