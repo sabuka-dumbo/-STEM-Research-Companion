@@ -1052,11 +1052,15 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 90%;
+    width: calc(90% - 20px);
     height: max-content;
     background-color: white;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 1200px) {
