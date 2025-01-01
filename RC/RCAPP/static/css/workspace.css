@@ -1039,6 +1039,15 @@
     border: none;
 }
 
+#myChart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+
+}
+
 @media screen and (max-width: 1200px) {
     #mindmapName {
         width: calc(100% - 30px);
