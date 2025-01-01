@@ -429,3 +429,31 @@ function change_back_color() {
     }
   });
 }
+
+function change_back_color() {
+  const cc_border_color = document.getElementById("border_color").value;
+
+  current_border_color = cc_border_color;
+
+  chart.destroy();
+  chart = new Chart(ctx, {
+    type: current_type,
+    data: {
+      labels: ['Red'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12],
+        backgroundColor: current_back_color,
+        borderColor: current_border_color,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
