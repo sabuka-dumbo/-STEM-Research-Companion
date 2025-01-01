@@ -348,23 +348,42 @@ function addNode() {
   diagram.commitTransaction("addNode");
 }
 
-function change_chart() {
-  const cc_select = document.getElementById("cc-select").value;
-
-  current_type = cc_select;  
-}
-
 let current_type = document.getElementById("cc-select").value;
 
 const ctx = document.getElementById('myChart');
+let chart = new Chart(ctx, {
+  type: current_type,
+  data: {
+    labels: ['Red'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12],
+      backgroundColor: 'rgb(255, 174, 192)',
+      borderWidth: 1,
+      borderColor: 'rgb(227, 81, 113)'
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
 
-  new Chart(ctx, {
-    type: current_type,
+function change_chart() {
+  const cc_select = document.getElementById("cc-select").value;
+
+  chart.destroy();
+  chart = new Chart(ctx, {
+    type: cc_select,
     data: {
       labels: ['Red'],
       datasets: [{
         label: '# of Votes',
         data: [12],
+        backgroundColor: 'rgb(255, 99, 132)',
         borderWidth: 1
       }]
     },
@@ -376,3 +395,4 @@ const ctx = document.getElementById('myChart');
       }
     }
   });
+}
