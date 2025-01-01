@@ -1286,8 +1286,10 @@
     }
 
     .cc-add-div {
-        display: none;
+        display: block;
     }
+
+    
 }
 
 @media screen and (max-width: 740px) {
