@@ -347,3 +347,7 @@ function addNode() {
   });
   diagram.commitTransaction("addNode");
 }
+
+
+import Chart from 'chart.js/auto';
+
