@@ -1275,6 +1275,11 @@
         grid-row: 2;
         margin-top: 10px;
         width: 100%;
+        height: max-content;
+    }
+
+    .cc-add-div {
+        display: none;
     }
 }
 
