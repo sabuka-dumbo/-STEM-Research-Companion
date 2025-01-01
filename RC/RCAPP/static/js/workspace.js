@@ -348,11 +348,14 @@ function addNode() {
   diagram.commitTransaction("addNode");
 }
 
+function change_chart() {
+  
+}
 
 const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'pie',
+    type: 'polarArea',
     data: {
       labels: ['Red'],
       datasets: [{
