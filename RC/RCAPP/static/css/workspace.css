@@ -1289,7 +1289,13 @@
         display: block;
     }
 
-    
+    .cc-saved-info {
+        grid-template-columns: 65% 5% 14% 2% 14%;
+    }
+
+    .cc-ad-div {
+        grid-template-columns: 30% 2% 30% 16% 10% 2% 10%;
+    }
 }
 
 @media screen and (max-width: 740px) {
