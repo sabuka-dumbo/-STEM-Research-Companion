@@ -457,3 +457,33 @@ function change_border_color() {
     }
   });
 }
+
+function reset_chart() {
+  current_back_color = "#ffaec0";
+  current_border_color = "#e35171";
+
+  document.getElementById("back_color").value = "#ffaec0";
+  document.getElementById("border_color").value = "#e35171";
+
+  chart.destroy();
+  chart = new Chart(ctx, {
+    type: current_type,
+    data: {
+      labels: ['Red'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12],
+        backgroundColor: current_back_color,
+        borderColor: current_border_color,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
