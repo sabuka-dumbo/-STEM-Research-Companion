@@ -1259,7 +1259,10 @@
 }
 
 @media screen and (max-width: 1100px) {
-    
+    .cc-div {
+        grid-template-columns: max-content;
+        grid-row: 1 10px 1;
+    }
 }
 
 @media screen and (max-width: 740px) {
