@@ -250,14 +250,6 @@
                             <option value="Polar_Area">Polar Area Chart</option>
                         </select>
 
-                        <h1 class="cc-division2 normal-font">Label here:</h1>
-
-                        <input type="text" name="" class="normal-font cc-input" id="" placeholder="Type label name">
-
-                        <h1 class="cc-division3 normal-font">Data:</h1>
-
-                        <input type="number" name="" class="normal-font cc-number-input">
-
                         <h1 class="cc-division4 normal-font">Background color:</h1>
 
                         <input type="color" name="" class="normal-font cc-color-input1">
@@ -278,11 +270,15 @@
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
+
+            <div class="cc-add-div">
+
+            </div>
         </div>
     </div>
 
 
-    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/gojs"></script>
     <script src="{% static 'js/workspace.js' %}"></script>
 {% endblock %}

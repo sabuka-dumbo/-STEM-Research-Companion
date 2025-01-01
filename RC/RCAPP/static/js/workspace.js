@@ -349,5 +349,23 @@ function addNode() {
 }
 
 
-import Chart from 'chart.js/auto';
+const ctx = document.getElementById('myChart');
 
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
