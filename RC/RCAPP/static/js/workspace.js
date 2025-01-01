@@ -430,7 +430,7 @@ function change_back_color() {
   });
 }
 
-function change_back_color() {
+function change_border_color() {
   const cc_border_color = document.getElementById("border_color").value;
 
   current_border_color = cc_border_color;
