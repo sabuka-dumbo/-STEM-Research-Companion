@@ -349,7 +349,7 @@ function addNode() {
 }
 
 function change_chart() {
-  
+  const cc_select = document.getElementById("cc-select");
 }
 
 const ctx = document.getElementById('myChart');
