@@ -1061,6 +1061,24 @@
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 15px;
+}
+
+.cc-ad-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+}
+
+.cc-add-line {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1.5px black solid;
 }
 
 @media screen and (max-width: 1200px) {
