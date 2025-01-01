@@ -351,13 +351,15 @@ function addNode() {
 function change_chart() {
   const cc_select = document.getElementById("cc-select");
 
-  
+  current_type = cc_select;  
 }
+
+let current_type = document.getElementById("cc-select").value;
 
 const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'polarArea',
+    type: current_type,
     data: {
       labels: ['Red'],
       datasets: [{
