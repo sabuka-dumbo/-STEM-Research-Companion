@@ -1464,6 +1464,28 @@
         padding-top: 12px;
         padding-bottom: 12px;
     }
+
+    .cc-ad-div {
+        grid-template-columns: 55% 5% 45%;
+    }
+
+    .cc-ad-input1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .cc-ad-input2 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .cc-ad-button2 {
+        grid-column: 3;
+        grid-row: 2;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 370px) {
