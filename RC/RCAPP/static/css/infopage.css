@@ -13,6 +13,7 @@ html, body{
     background-image: linear-gradient(rgba(61, 59, 59, 0.379), rgba(0, 0, 0, 0.731)), url('/static/pics/background.avif');
     background-size: cover;
     background-position: center;
+    padding-bottom: 10vh;
 }
 
 .navbar{
@@ -197,52 +198,26 @@ html, body{
 }
 
 
-@media (max-width: 450px){
-    .login-btn{
-        display: none;
-    }
-    
-    .navbar ul li{
-        margin: 0;
-    }
-    .navbar{
-        width: 100%;
-    }
-    
-    .login-icon{
-        display: flex;
-        width: 20vw;
-    }
-    #card{
-        flex: 1 1 calc(100% - 20px);
-    }
-}
 
-@media (max-width: 730px){
-    .navbar{
-        width: 95%;
-    }
-    .text-box p{
-        width: 100%;
-    }
-    
-    .container-box{
-        flex-direction: column;
-    }
+
+
+
+
+
+@media (min-width: 1100px){
     .STEM-pic{
-        display: none;
+        padding-top: 0;
+    }
+    .main{
+        padding-bottom: 5vh;
+    }
+    .text-box h1{
+        padding-top: 10vh;
+    }
+    .hero-btn{
+        margin-top: 15vh;
     }
 }
-
-@media (max-width: 500px){
-    .STEM-pic{
-        display: flex;
-        width: 80%;
-        margin-left: 10%;
-    }
-}
-
-
 @media (max-width: 750px){
     .STEM-pic{
         display: none;
@@ -250,14 +225,94 @@ html, body{
     #card{
         flex: 1 1 calc(50% - 40px);
     }
+    .navbar{
+        width: 95%;
+    }
+    .text-box{
+        width: 100%;
+    }
 }
 @media (max-width: 613px){
-    .login-btn{
+    .login-btn {
         display: none;
     }
-    .login-icon{
-        display: flex;
-        width: 10vw;
+    .login-icon {
+        display: inline-block;
+        width: 2.7em;
         height: auto;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 2%;
+    }
+    
+    .navbar ul {
+        display: flex;
+        gap: 1em; 
+    }
+    .logo {
+        margin-right: 3vw;
+    }
+    
+    .navbar ul li {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media (max-width: 563px){
+    .register-btn{
+        background-color: transparent;
+        padding: 0;
+        text-align: center;
+        border-radius: 0;
+        
+    }
+    #card{
+        flex: 1 1 calc(100% - 20px);
+    }
+    .icon{
+        width: 20%;
+    }
+}
+
+@media (max-width: 347px){
+    .navbar ul li{
+        font-size: 1.2em;
+    }
+    .navbar ul{
+        gap: 0.5em;
+    }
+    .logo{
+        margin-right: 0;
+    }
+    .text-box h1{
+        font-size: 2.5em;
+    }
+    .text-box p{
+        font-size: 1.5em;
+    }
+    .hero-btn{
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+    .choose-title{
+        font-size: 2.5em;
+    }
+    .about-text{
+        font-size: 1.2em;
+    }
+    #card-title{
+        font-size: 1.2em;
+    }
+    #card-text{
+        font-size: 0.8em;
+    }
+    .icon{
+        width: 30%;
     }
 }
