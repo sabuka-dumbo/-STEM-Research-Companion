@@ -5,7 +5,39 @@
 {% endblock %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock %}
-
 {% block body %}
+<div class="main">
+    <div class="card">
+        <div class="welcome-box">
+            <div class="logo">
+                <i></i>
+                <p>STEM Research Companion</p>
+            </div>
+            <h1 class="wlcm-title">Welcome Here!</h1>
+            <p class="wlcm-text">To keep connected with us please login with your personal info.</p>
+            <p class="already-account-text">Already have an account?</p>
+            <button class="login-btn">Login</button>
+        </div>
+        
+        <div class="register-box">
+            <h1 class="title">Create account</h1>
+            <button><i></i>Register with Google</button>
+            <p class="or-txt">or</p>
+            <form action="/chemin/vers/le/serveur" method="POST" class="form">
+                <form action="/chemin/vers/le/serveur" method="POST" class="form">
+                    <input type="text" id="full-name" name="full_name" class="form-field" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" class="form-field" placeholder="Email address" required>
+                    <input type="password" id="password" name="password" class="form-field" placeholder="Password" required>
+                    <div class="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree with the <a href="{% url 'terms' %}">Terms & Conditions</a></label>
+                    </div>
+                    <button type="register-btn">Register</button>
+                </form>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

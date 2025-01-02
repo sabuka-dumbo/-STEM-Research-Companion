@@ -6,6 +6,12 @@ import json
 from .models import *
 
 # Create your views here.
+def terms(request):
+    return render(request, 'terms.html')
+
+def register(request):
+    return render(request, 'register.html')
+
 def index(request):
     return render(request, "index.html")
 
