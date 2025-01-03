@@ -585,7 +585,7 @@ function save_chart() {
     if (chart_data.length > 0) {
       var chartConfigJson = JSON.stringify(chart.config);
 
-      fetch(`/delete/`, {
+      fetch(`/save_chart/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -597,12 +597,11 @@ function save_chart() {
       })
       .then((response) => response.json())
       .then((data) => {
+        notification("New chart is saved!")
       })
       .catch((error) => {
-        notification("Sorry, failed to delete the mindmap");
+        notification("Sorry, failed to save the chart");
       });
-
-      notification("New chart is saved!")
     } else {
       notification("Please at least enter one data, to save the chart.");
     }
