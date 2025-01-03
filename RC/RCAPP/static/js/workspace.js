@@ -508,9 +508,9 @@ function chart_data_save() {
       chart_data_label.value = '';
       chart_data_value.value = '';
     } else {
-      notification("Please enter data's value.");
+      notification("Please enter data value.");
     }
   } else {
-    notification("Please enter data's label.");
+    notification("Please enter data label.");
   }
 }
