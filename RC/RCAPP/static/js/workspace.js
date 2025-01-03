@@ -532,11 +532,12 @@ function chart_data_save() {
               beginAtZero: true,
             },
             x: {
-              display: false,
-            }
-          },
+              display: false
+            },
+          }
         }
-      });
+      }
+    )
     } else {
       notification("Please enter data value.");
     }
