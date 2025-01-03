@@ -29,9 +29,10 @@
     margin: 0 auto;
 }
 .welcome-box{
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: fit-content;
 }
+
 
 
 
