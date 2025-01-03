@@ -518,8 +518,8 @@ function chart_data_save() {
         data: {
           labels: [],
           datasets: [{
-            label: chart_data.map(data => data.label),
-            data: chart_data.map(data => data.Value),
+            label: 0,
+            data: '',
             backgroundColor: current_back_color,
             borderColor: current_border_color,
             borderWidth: 1
