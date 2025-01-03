@@ -622,13 +622,6 @@ function save_chart(PID) {
 }
 
 function delete_data(Clabel, Cvalue) {
-  for (let i = 0; i < chart_data.length; i++) {
-    if (chart_data[i].label === Clabel && chart_data[i].value === Cvalue) {
-      chart_data.splice(i, 1);
-      break;
-    }
-  }
-
   console.log(Clabel,Cvalue)
 
   const divId = `${Clabel}${Cvalue}`;
