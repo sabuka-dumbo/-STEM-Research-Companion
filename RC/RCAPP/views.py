@@ -96,11 +96,20 @@ def save_chart(request, PID):
         chart_name = data.get('chart_name')
         chart_data = data.get('chart_data')
 
-        research = Project.objects.all().get(id=PID)
+        if not chart_name or not chart_data:
+            return JsonResponse({"error": "Chart name and data are required!"}, status=400)
 
-        new_chart = Chart(request, research=research, name=chart_name, data=chart_data)
+        try:
+            research = Project.objects.get(id=PID)
+        except Project.DoesNotExist:
+            return JsonResponse({"error": f"Project with ID {PID} does not exist."}, status=404)
+
+        new_chart = Chart(research=research, name=chart_name, data=chart_data)
         new_chart.save()        
 
-        return JsonResponse({"message": f"{chart_name} is saved!"})
-    except Mindmap.DoesNotExist:
-        return JsonResponse({"error": f"Couldn't save {chart_name}"}, status=404)
+        return JsonResponse({"message": f"Chart '{chart_name}' is saved!"})
+    
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "Invalid JSON data."}, status=400)
+    except Exception as e:
+        return JsonResponse({"error": f"An error occurred: {str(e)}"}, status=500)
