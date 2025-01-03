@@ -494,5 +494,8 @@ let chart_data = [];
 
 function chart_data_save() {
   chart_data.push({"Label": chart_data_label.value, "Value": chart_data_value.value})
-  console.log(chart_data)
+  notification("Data, " + chart_data_label.value + ", added to chart!")
+
+  chart_data_label.value = '';
+  chart_data_value.value = '';
 }
