@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lemon', sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-image: url("../pics/register-bg.webp");
+    background-position: center;
+    background-size: cover;
+}
+.card{
+    display: flex;
+    width: 90%;
+    height: 95%;
+    padding: 2em;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.welcome-box{
+    height: 100%;
+    width: fit-content;
+    text-align: center;
+}
+.logo p{
+    margin-left: 2em;
+    text-align: left;
+}
+.wlcm-title{
+    margin-top: 15vh;
+    font-size: 2.5em;
+    padding-bottom: 1em;
+}
+.wlcm-subtitle{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+.wlcm-text{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1em;
+    margin-bottom: 25%;
+}
+
+.already-account-text{
+    font-size: 0.7em;
+}
+.register-now-btn{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.register-box{
+    height: 100%;
+    width: fit-content;
+    text-align: center;
+    margin-top: 30vh;
+    margin-left: 12vw;
+}
+.title{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.google-btn{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+}
+.google-icon{
+    width: 2em;
+    margin-right: 5px;
+}
+.separator { 
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0;
+    
+} 
+.separator::before,
+.separator::after { 
+    content: ''; 
+    width: 8vw; 
+    border-bottom: 
+    1px solid #000; 
+} 
+.separator:not(:empty)::before {
+    margin-right: .25em; 
+} 
+.separator:not(:empty)::after {
+    margin-left: .25em; 
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.form-field { 
+    width: 100%; 
+    padding: 15px; 
+    border: none;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    font-family: 'Lemon', sans-serif;
+    margin: 0 auto;
+}
+.forgot{
+    font-size: 0.9em;
+}
+.login-btn{
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}

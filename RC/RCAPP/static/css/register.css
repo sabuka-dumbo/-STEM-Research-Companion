@@ -55,6 +55,8 @@
     font-size: 0.7em;
 }
 .login-btn{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius: 30px;
     padding: 10px;
     font-size: 1em;
@@ -66,15 +68,26 @@
     width: fit-content;
     text-align: center;
     margin-top: 30vh;
+    margin-left: 8em;
 }
 .title{
     font-size: 2.5em;
     margin-bottom: 15px;
 }
 .google-btn{
+    display: flex;
+    align-items: center;
     border-radius: 30px;
     padding: 10px;
-    background-color: rgb(63, 202, 236);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+}
+.google-icon{
+    width: 2em;
+    margin-right: 5px;
 }
 .separator { 
     display: flex;
@@ -98,4 +111,31 @@
     margin-left: .25em; 
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
 
+.form-field { 
+    width: 90%; 
+    padding: 10px; 
+    border: none;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    font-family: 'Lemon', sans-serif;
+    margin: 0 auto;
+}
+.terms{
+    margin-top: 1em;
+}
+
+.register-btn{
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}

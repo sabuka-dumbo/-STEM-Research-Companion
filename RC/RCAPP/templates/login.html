@@ -5,7 +5,40 @@
 {% endblock %}
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
 {% block body %}
+<div class="main">
+    <div class="card">
+        <div class="welcome-box">
+            <div class="logo">
+                <img src="#" alt="logo-icon">
+                <p>STEM Research Companion</p>
+            </div>
+            <h1 class="wlcm-title">Hey There!</h1>
+            <h2 class="wlcm-subtitle">Welcome back</h2>
+            <p class="wlcm-text">Enter your personal details and start your journey with us!</p>
+            <div class="already-box">
+                <p class="already-account-text">Already have an account?</p>
+                <button class="register-now-btn" type="button">Register Now</button>
+            </div>
+            
+        </div>
+        
+        <div class="register-box">
+            <h1 class="title">Log In</h1>
+            <button class="google-btn">
+                <img src="{% static 'pics/google.png' %}" alt="google-icon" class="google-icon">Log In with Google
+            </button>
+            <div class="separator">or</div>
+            <form action="/chemin/vers/le/serveur" method="POST" class="form">
+                <input type="email" id="email" name="email" class="form-field" placeholder="Email address" required>
+                <input type="password" id="password" name="password" class="form-field" placeholder="Password" required>
+                <p class="forgot">Forgot your password?</p>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

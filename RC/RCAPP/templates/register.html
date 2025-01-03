@@ -12,21 +12,23 @@
     <div class="card">
         <div class="welcome-box">
             <div class="logo">
-                <i></i>
+                <img src="#" alt="logo-icon">
                 <p>STEM Research Companion</p>
             </div>
             <h1 class="wlcm-title">Welcome Here!</h1>
             <p class="wlcm-text">To keep connected with us please login with your personal info.</p>
             <div class="already-box">
                 <p class="already-account-text">Already have an account?</p>
-                <button class="login-btn">Login</button>
+                <button class="login-btn" type="button">Login</button>
             </div>
             
         </div>
         
         <div class="register-box">
             <h1 class="title">Create account</h1>
-            <button class="google-btn"><i></i>Register with Google</button>
+            <button class="google-btn">
+                <img src="{% static 'pics/google.png' %}" alt="google-icon" class="google-icon">Register with Google
+            </button>
             <div class="separator">or</div>
             <form action="/chemin/vers/le/serveur" method="POST" class="form">
                 <input type="text" id="full-name" name="full_name" class="form-field" placeholder="Full Name" required>
@@ -36,7 +38,7 @@
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">I agree with the <a href="{% url 'terms' %}">Terms & Conditions</a></label>
                 </div>
-                <button type="register-btn">Register</button>
+                <button type="submit" class="register-btn">Register</button>
             </form>
         </div>
     </div>
