@@ -529,9 +529,12 @@ function chart_data_save() {
         options: {
           scales: {
             y: {
-              beginAtZero: true
+              beginAtZero: true,
+            },
+            x: {
+              display: false,
             }
-          }
+          },
         }
       });
     } else {
