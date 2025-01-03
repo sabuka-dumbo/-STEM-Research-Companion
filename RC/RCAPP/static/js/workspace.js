@@ -493,9 +493,17 @@ const chart_data_value = document.getElementById("chart_data_value");
 let chart_data = [];
 
 function chart_data_save() {
-  chart_data.push({"Label": chart_data_label.value, "Value": chart_data_value.value})
-  notification("Data, " + chart_data_label.value + ", added to chart!")
-
-  chart_data_label.value = '';
-  chart_data_value.value = '';
+  if (chart_data_label.value !== '') {
+    if (chart_data_value.value !== '') {
+      chart_data.push({"Label": chart_data_label.value, "Value": chart_data_value.value})
+      notification("Data, " + chart_data_label.value + ", added to chart!")
+    
+      chart_data_label.value = '';
+      chart_data_value.value = '';
+    } else {
+      notification("Please enter data's value.");
+    }
+  } else {
+    notification("Please enter data's label.");
+  }
 }
