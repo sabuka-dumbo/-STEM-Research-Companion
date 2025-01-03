@@ -626,6 +626,9 @@ function delete_data(Clabel, Cvalue) {
 
   const divId = `${Clabel}${Cvalue}`;
   const divElement = document.getElementById(divId);
+
+  chart_data = chart_data.filter(item => item.Label !== Clabel || item.Value !== Cvalue);
+
   console.log(divId)
   if (divElement) {
     divElement.remove();
