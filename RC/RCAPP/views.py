@@ -92,8 +92,10 @@ def delete_mindmap(request, PNAME):
 @csrf_exempt
 def save_chart(request):
     try:
-        
-
+        data = json.loads(request.body)
+        chart_name = data.get('chart_name')
+        chart_data = data.get('chart_data')
+        print(chart_name, "    ssss   ", chart_data)
         return JsonResponse({"message": f""})
     except Mindmap.DoesNotExist:
         return JsonResponse({"error": ""}, status=404)

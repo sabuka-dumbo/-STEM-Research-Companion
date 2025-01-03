@@ -583,11 +583,18 @@ const chart_name_input = document.getElementById("chart_name");
 function save_chart() {
   if (chart_name_input.value !== '') {
     if (chart_data.length > 0) {
-      var chartjson = chart.toBase64Image();
-
       var chartConfigJson = JSON.stringify(chart.config);
 
-      fetch(`/delete/`)
+      fetch(`/delete/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chart_name: chart_name_input.value,
+          chart_data: chartConfigJson
+        })
+      })
       .then((response) => response.json())
       .then((data) => {
       })
