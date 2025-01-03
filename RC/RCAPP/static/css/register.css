@@ -32,7 +32,12 @@
     height: 100%;
     width: fit-content;
 }
-
+.logo p{
+    margin-left: 2em;
+}
+.wlcm-title{
+    
+}
 
 
 
