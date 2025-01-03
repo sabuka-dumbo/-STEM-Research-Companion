@@ -583,16 +583,13 @@ const chart_name_input = document.getElementById("chart_name");
 function save_chart() {
   if (chart_name_input.value !== '') {
     if (chart_data.length > 0) {
+      var chartjson = chart.toBase64Image();
+
+      var chartConfigJson = JSON.stringify(chart.config);
+
       fetch(`/delete/`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.error) {
-        } else {
-          diagram.model = new go.TreeModel([]);
-          document.getElementById("mindmapName").value = "";
-          document.getElementById(id).remove();
-          clear_mm();
-        }
       })
       .catch((error) => {
         notification("Sorry, failed to delete the mindmap");
