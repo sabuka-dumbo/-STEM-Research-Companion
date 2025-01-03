@@ -527,6 +527,14 @@ function chart_data_save() {
           }]
         },
         options: {
+          plugins: {
+            legend: {
+                display: true,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            }
+        },
           scales: {
             y: {
               beginAtZero: true
