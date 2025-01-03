@@ -577,3 +577,32 @@ function chart_data_save() {
     notification("Please enter data label.");
   }
 }
+
+const chart_name_input = document.getElementById("chart_name");
+
+function save_chart() {
+  if (chart_name_input.value !== '') {
+    if (chart_data.length > 0) {
+      fetch(`/delete/`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+        } else {
+          diagram.model = new go.TreeModel([]);
+          document.getElementById("mindmapName").value = "";
+          document.getElementById(id).remove();
+          clear_mm();
+        }
+      })
+      .catch((error) => {
+        notification("Sorry, failed to delete the mindmap");
+      });
+
+      notification("New chart is saved!")
+    } else {
+      notification("Please at least enter one data, to save the chart.");
+    }
+  } else {
+    notification("Please enter chart name before saving it.");
+  }
+}

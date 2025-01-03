@@ -88,3 +88,12 @@ def delete_mindmap(request, PNAME):
         return JsonResponse({"message": f"Mind map '{PNAME}' deleted successfully."})
     except Mindmap.DoesNotExist:
         return JsonResponse({"error": "Mind map not found."}, status=404)
+
+@csrf_exempt
+def save_chart(request):
+    try:
+        
+
+        return JsonResponse({"message": f""})
+    except Mindmap.DoesNotExist:
+        return JsonResponse({"error": ""}, status=404)

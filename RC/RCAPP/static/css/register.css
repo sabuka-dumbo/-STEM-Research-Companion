@@ -27,6 +27,8 @@
     align-items: center;
     flex-direction: row;
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .welcome-box{
     height: 100%;
@@ -46,6 +48,9 @@
     width: 70%;
     margin: 0 auto;
     font-size: 1em;
+}
+.already-account-text{
+    margin-top: 20vh;
 }
 
 
