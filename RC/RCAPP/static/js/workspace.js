@@ -106,29 +106,36 @@ function notification(text) {
     notify_div.style.display = "block";
     notify_div.style.animation = "notify_div_animation_open 1s ease";
 
-    notify_div.addEventListener("animationend", function() {
+    notify_div.addEventListener("animationend", function handleOpenAnimation() {
         notify_div.style.animation = '';
 
-        setInterval(() => {
+        setTimeout(() => {
             notify_div.style.animation = "notify_div_animation_close 1s ease";
 
-            notify_div.addEventListener("animationend", function() {
+            notify_div.addEventListener("animationend", function handleCloseAnimation() {
                 notify_div.style.animation = '';
-                notify_div.style.display = '';
-            })
+                notify_div.style.display = 'none';
+
+                notify_div.removeEventListener("animationend", handleCloseAnimation);
+            });
         }, 3500);
-    })
+
+        notify_div.removeEventListener("animationend", handleOpenAnimation);
+    });
 }
 
 notify_icon.addEventListener("click", function() {
     notify_div.style.animation = '';
-    notify_div.style.animation = "notify_div_animation_close ease 1s";
+    notify_div.style.animation = "notify_div_animation_close 1s ease";
 
-    notify_div.addEventListener("animationend", function() {
+    notify_div.addEventListener("animationend", function handleCloseAnimation() {
         notify_div.style.animation = '';
-        notify_div.style.display = '';
-    })
-})
+        notify_div.style.display = 'none';
+
+        notify_div.removeEventListener("animationend", handleCloseAnimation);
+    });
+});
+
 
 let diagram = null;
 
