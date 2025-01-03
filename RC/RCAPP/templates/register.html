@@ -26,16 +26,14 @@
             <button><i></i>Register with Google</button>
             <p class="or-txt">or</p>
             <form action="/chemin/vers/le/serveur" method="POST" class="form">
-                <form action="/chemin/vers/le/serveur" method="POST" class="form">
-                    <input type="text" id="full-name" name="full_name" class="form-field" placeholder="Full Name" required>
-                    <input type="email" id="email" name="email" class="form-field" placeholder="Email address" required>
-                    <input type="password" id="password" name="password" class="form-field" placeholder="Password" required>
-                    <div class="terms">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree with the <a href="{% url 'terms' %}">Terms & Conditions</a></label>
-                    </div>
-                    <button type="register-btn">Register</button>
-                </form>
+                <input type="text" id="full-name" name="full_name" class="form-field" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" class="form-field" placeholder="Email address" required>
+                <input type="password" id="password" name="password" class="form-field" placeholder="Password" required>
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree with the <a href="{% url 'terms' %}">Terms & Conditions</a></label>
+                </div>
+                <button type="register-btn">Register</button>
             </form>
         </div>
     </div>

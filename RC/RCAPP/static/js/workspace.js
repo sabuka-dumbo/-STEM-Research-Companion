@@ -505,6 +505,34 @@ function chart_data_save() {
     
       chart_data_label.value = '';
       chart_data_value.value = '';
+
+      current_back_color = "#ffaec0";
+      current_border_color = "#e35171";
+
+      document.getElementById("back_color").value = "#ffaec0";
+      document.getElementById("border_color").value = "#e35171";
+
+      chart.destroy();
+      chart = new Chart(ctx, {
+        type: current_type,
+        data: {
+          labels: [],
+          datasets: [{
+            label: '',
+            data: 0,
+            backgroundColor: current_back_color,
+            borderColor: current_border_color,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     } else {
       notification("Please enter data value.");
     }
