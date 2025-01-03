@@ -506,9 +506,6 @@ function chart_data_save() {
       chart_data_label.value = '';
       chart_data_value.value = '';
 
-      current_back_color = "#ffaec0";
-      current_border_color = "#e35171";
-
       document.getElementById("back_color").value = "#ffaec0";
       document.getElementById("border_color").value = "#e35171";
 
@@ -516,10 +513,10 @@ function chart_data_save() {
       chart = new Chart(ctx, {
         type: current_type,
         data: {
-          labels: [],
+          labels: chart_data.map(data => data.Label),
           datasets: [{
-            label: chart_data.map(data => Number(data.label)),
-            data: chart_data.map(data => Number(data.Value)),
+            label: chart_data.map(data => data.Label),
+            data: chart_data.map(data => Number(data.Value)), 
             backgroundColor: current_back_color,
             borderColor: current_border_color,
             borderWidth: 1

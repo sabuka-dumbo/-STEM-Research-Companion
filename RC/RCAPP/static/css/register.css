@@ -1,12 +1,10 @@
 .main{
-    
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 20px;
-    min-width: 100%;
-    min-height: 100vh;
     background-image: url("../pics/register-bg.webp");
     background-position: center;
     background-size: cover;
