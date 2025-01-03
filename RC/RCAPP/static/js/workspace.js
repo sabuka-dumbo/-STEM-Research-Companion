@@ -487,3 +487,8 @@ function reset_chart() {
     }
   });
 }
+
+const chart_data_label = document.getElementById("chart_data_label");
+const chart_data_value = document.getElementById("chart_data_value");
+let chart_data = [];
+
