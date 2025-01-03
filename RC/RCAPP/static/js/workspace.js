@@ -384,6 +384,8 @@ function change_chart() {
 
   current_type = cc_select;
 
+  chart_data = [];
+
   chart.destroy();
   chart = new Chart(ctx, {
     type: cc_select,
@@ -466,6 +468,8 @@ function change_border_color() {
 function reset_chart() {
   current_back_color = "#ffaec0";
   current_border_color = "#e35171";
+
+  chart_data = [];
 
   document.getElementById("back_color").value = "#ffaec0";
   document.getElementById("border_color").value = "#e35171";

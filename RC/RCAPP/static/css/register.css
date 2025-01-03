@@ -21,42 +21,7 @@
     flex-direction: row;
     margin: 0 auto;
 }
-.welcome-box{
-    margin-left: 2em;
-    width: fit-content;
-    
-}
-.logo p{
-    margin-left: 1em;
-}
-.wlcm-title{
-    margin-top: 17vh;
-    margin-left: 2em;
-    font-family: 'Lemon', sans-serif;
-    font-size: 2.5em;
-}
-.wlcm-text{
-    width: 70%;
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 5vh;
-}
-.already-account-text{
-    margin-top: 30vh;
-    font-size: 0.8em;
-    text-align: center;
 
-}
-.login-btn{
-    text-align: center;
-    border: black;
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 1em;
-    font-family: 'Lemon', sans-serif;
-    margin-left: 50%;
-    
-}
 
 
 
