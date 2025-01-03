@@ -570,7 +570,7 @@ function chart_data_save() {
       });
 
       data_place.innerHTML += `
-        <div class="cc-saved-info">
+        <div class="cc-saved-info" id={${chart_data_label.value}${chart_data_value.value}}>
           <h1 class="normal-font cc-saved-label">${chart_data_label.value}</h1>
 
           <button class="normal-font cc-saved-button1" onclick="delete_data(${chart_data_label.value}, ${chart_data_value.value})">Delete</button>
@@ -622,4 +622,10 @@ function save_chart(PID) {
 }
 
 function delete_data(Clabel, Cvalue) {
+  for (let i = 0; i < chart_data.length; i++) {
+    if (chart_data[i].label === Clabel && chart_data[i].value === Cvalue) {
+      chart_data.splice(i, 1);
+      break;
+    }
+  }
 }
