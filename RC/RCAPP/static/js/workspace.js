@@ -361,19 +361,25 @@ const ctx = document.getElementById('myChart');
 let chart = new Chart(ctx, {
   type: current_type,
   data: {
-    labels: ['Red'],
+    labels: ['Example'],
     datasets: [{
-      label: '# of Votes',
-      data: [12],
+      label: 'Example',
+      data: [100],
       backgroundColor: current_back_color,
       borderWidth: 1,
       borderColor: current_border_color
     }]
   },
   options: {
+    plugins: {
+      legend: {
+          display: false,
+      }
+    },
+
     scales: {
       y: {
-        beginAtZero: true
+          beginAtZero: true
       }
     }
   }
@@ -390,19 +396,25 @@ function change_chart() {
   chart = new Chart(ctx, {
     type: cc_select,
     data: {
-      labels: ['Red'],
+      labels: ['Example'],
       datasets: [{
-        label: '# of Votes',
-        data: [12],
+        label: "Example",
+        data: [100],
         backgroundColor: current_back_color,
         borderColor: current_border_color,
         borderWidth: 1
       }]
     },
     options: {
+      plugins: {
+        legend: {
+            display: false,
+        }
+      },
+
       scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
         }
       }
     }
@@ -420,17 +432,23 @@ function change_back_color() {
     data: {
       labels: ['Red'],
       datasets: [{
-        label: '# of Votes',
-        data: [12],
+        label: chart_data.map(data => data.Label),
+        data: chart_data.map(data => data.value),
         backgroundColor: current_back_color,
         borderColor: current_border_color,
         borderWidth: 1
       }]
     },
     options: {
+      plugins: {
+        legend: {
+            display: false,
+        }
+      },
+
       scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
         }
       }
     }
@@ -448,17 +466,23 @@ function change_border_color() {
     data: {
       labels: ['Red'],
       datasets: [{
-        label: '# of Votes',
-        data: [12],
+        label: chart_data.map(data => data.Label),
+        data: chart_data.map(data => data.value),
         backgroundColor: current_back_color,
         borderColor: current_border_color,
         borderWidth: 1
       }]
     },
     options: {
+      plugins: {
+        legend: {
+            display: false,
+        }
+      },
+
       scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
         }
       }
     }
@@ -480,17 +504,23 @@ function reset_chart() {
     data: {
       labels: ['Red'],
       datasets: [{
-        label: '# of Votes',
-        data: [12],
+        label: chart_data.map(data => data.Label),
+        data: chart_data.map(data => data.value),
         backgroundColor: current_back_color,
         borderColor: current_border_color,
         borderWidth: 1
       }]
     },
     options: {
+      plugins: {
+        legend: {
+            display: false,
+        }
+      },
+
       scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
         }
       }
     }
@@ -529,15 +559,13 @@ function chart_data_save() {
         options: {
           plugins: {
             legend: {
-                display: true,
-                labels: {
-                    color: 'rgb(255, 99, 132)'
-                }
+                display: false,
             }
-        },
+          },
+
           scales: {
             y: {
-              beginAtZero: true
+                beginAtZero: true
             }
           }
         }

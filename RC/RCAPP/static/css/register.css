@@ -31,12 +31,21 @@
 .welcome-box{
     height: 100%;
     width: fit-content;
+    text-align: center;
 }
 .logo p{
     margin-left: 2em;
+    text-align: left;
 }
 .wlcm-title{
-    margin-top: 10vh;
+    margin-top: 20vh;
+    font-size: 2.5em;
+    padding-bottom: 1em;
+}
+.wlcm-text{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1em;
 }
 
 
