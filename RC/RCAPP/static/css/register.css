@@ -20,7 +20,7 @@
     display: flex;
     width: 90%;
     height: 95%;
-    padding: 20px;
+    padding: 2em;
     background-color: white;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,10 +29,8 @@
     margin: 0 auto;
 }
 .welcome-box{
-    background-image: url("../pics/gradient.wave.png");
-    background-position: center;
-    background-size: cover;
-    height: ;
+    height: auto;
+    width: auto;
 }
 
 

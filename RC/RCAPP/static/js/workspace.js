@@ -529,15 +529,11 @@ function chart_data_save() {
         options: {
           scales: {
             y: {
-              beginAtZero: true,
-            },
-            x: {
-              display: false
-            },
+              beginAtZero: true
+            }
           }
         }
-      }
-    )
+      });
     } else {
       notification("Please enter data value.");
     }
