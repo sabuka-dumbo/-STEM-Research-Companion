@@ -15,5 +15,5 @@ urlpatterns = [
     path("load/<str:MN>", views.load_mindmap, name="load_mindmap"),
     path("list/", views.list_mindmaps, name="list_mindmaps"),
     path('delete/<str:PNAME>/', views.delete_mindmap, name='delete_mindmap'),
-    path('save_chart/', views.save_chart, name='delete_mindmap'),
+    path('save_chart/<int:PID>/', views.save_chart, name='delete_mindmap'),
 ]

@@ -90,13 +90,16 @@ def delete_mindmap(request, PNAME):
         return JsonResponse({"error": "Mind map not found."}, status=404)
 
 @csrf_exempt
-def save_chart(request):
+def save_chart(request, PID):
     try:
         data = json.loads(request.body)
         chart_name = data.get('chart_name')
         chart_data = data.get('chart_data')
 
-        new_chart = Chart(request)
+        research = Project.objects.all().get(id=PID)
+
+        new_chart = Chart(request, research=research, name=chart_name, data=chart_data)
+        new_chart.save()        
 
         return JsonResponse({"message": f"{chart_name} is saved!"})
     except Mindmap.DoesNotExist:

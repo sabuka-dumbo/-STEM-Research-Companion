@@ -586,7 +586,7 @@ function save_chart(PID) {
     if (chart_data.length > 0) {
       var chartConfigJson = JSON.stringify(chart.config);
 
-      fetch(`/save_chart/`, {
+      fetch(`/save_chart/${PID}/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

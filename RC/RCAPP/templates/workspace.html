@@ -266,7 +266,7 @@
                     <div class="cc-buttons-div">
                         <button class="cc-button1 normal-font" onclick="reset_chart()">Reset</button>
 
-                        <button class="cc-button2 normal-font" onclick="save_chart()">Save</button>
+                        <button class="cc-button2 normal-font" onclick="save_chart(`{{ project_info.id }}`)">Save</button>
                     </div>
                 </div>
 
@@ -285,7 +285,7 @@
 
                     <input type="number" placeholder="Value here" class="normal-font cc-ad-input2" id="chart_data_value">
 
-                    <button onclick="chart_data_save(`{{ project_info.project_name }}`)" class="normal-font cc-ad-button2">Save</button>
+                    <button onclick="chart_data_save()" class="normal-font cc-ad-button2">Save</button>
                 </div>
 
                 <hr class="cc-add-line">
