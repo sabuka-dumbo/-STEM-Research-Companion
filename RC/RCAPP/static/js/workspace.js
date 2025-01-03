@@ -628,4 +628,5 @@ function delete_data(Clabel, Cvalue) {
       break;
     }
   }
+
 }
