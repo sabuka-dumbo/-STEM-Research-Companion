@@ -574,7 +574,7 @@ function chart_data_save() {
           <h1 class="normal-font cc-saved-label">${chart_data_label.value}</h1>
 
           <button class="normal-font cc-saved-button1" onclick="delete_data('${chart_data_label.value}', '${chart_data_value.value}')")">Delete</button>
-          <button class="normal-font cc-saved-button2" onclick="">Edit</button>
+          <button class="normal-font cc-saved-button2" onclick="edit_data('${chart_data_label.value}', '${chart_data_value.value}')">Edit</button>
         </div>
       `;
 
@@ -622,14 +622,12 @@ function save_chart(PID) {
 }
 
 function delete_data(Clabel, Cvalue) {
-  console.log(Clabel,Cvalue)
 
   const divId = `${Clabel}${Cvalue}`;
   const divElement = document.getElementById(divId);
 
   chart_data = chart_data.filter(item => item.Label !== Clabel || item.Value !== Cvalue);
 
-  console.log(divId)
   if (divElement) {
     divElement.remove();
 
@@ -661,4 +659,9 @@ function delete_data(Clabel, Cvalue) {
       }
     });
   }
+}
+
+function edit_data(Clabel, Cvalue) {
+  chart_data_label.value = Clabel;
+  chart_data_value.value = Cvalue;
 }
