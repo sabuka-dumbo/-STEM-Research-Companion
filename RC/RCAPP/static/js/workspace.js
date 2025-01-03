@@ -570,7 +570,7 @@ function chart_data_save() {
       });
 
       data_place.innerHTML += `
-        <div class="cc-saved-info" id={${chart_data_label.value}${chart_data_value.value}}>
+        <div class="cc-saved-info" id="${chart_data_label.value}${chart_data_value.value}">
           <h1 class="normal-font cc-saved-label">${chart_data_label.value}</h1>
 
           <button class="normal-font cc-saved-button1" onclick="delete_data('${chart_data_label.value}', '${chart_data_value.value}')")">Delete</button>
@@ -629,8 +629,11 @@ function delete_data(Clabel, Cvalue) {
     }
   }
 
-  const divId = `${chart_data_label.value}${chart_data_value.value}`;
+  console.log(Clabel,Cvalue)
+
+  const divId = `${Clabel}${Cvalue}`;
   const divElement = document.getElementById(divId);
+  console.log(divId)
   if (divElement) {
     divElement.remove();
   }
