@@ -48,9 +48,17 @@
     width: 70%;
     margin: 0 auto;
     font-size: 1em;
+    padding-bottom: 40%;
 }
+
 .already-account-text{
-    margin-top: 30vh;
+    font-size: 0.7em;
+}
+.login-btn{
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 

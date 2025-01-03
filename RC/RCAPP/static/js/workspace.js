@@ -529,6 +529,7 @@ function reset_chart() {
 
 const chart_data_label = document.getElementById("chart_data_label");
 const chart_data_value = document.getElementById("chart_data_value");
+const data_place = document.getElementById("cc-saved-info-div");
 let chart_data = [];
 
 function chart_data_save() {
@@ -537,9 +538,6 @@ function chart_data_save() {
       chart_data.push({"Label": chart_data_label.value, "Value": chart_data_value.value})
       notification("Data, " + chart_data_label.value + ", added to chart!")
     
-      chart_data_label.value = '';
-      chart_data_value.value = '';
-
       document.getElementById("back_color").value = "#ffaec0";
       document.getElementById("border_color").value = "#e35171";
 
@@ -570,6 +568,18 @@ function chart_data_save() {
           }
         }
       });
+
+      data_place.innerHTML += `
+        <div class="cc-saved-info">
+          <h1 class="normal-font cc-saved-label">${chart_data_label.value}</h1>
+
+          <button class="normal-font cc-saved-button1" onclick="delete_data(${chart_data_label.value}, ${chart_data_value.value})">Delete</button>
+          <button class="normal-font cc-saved-button2" onclick="">Edit</button>
+        </div>
+      `;
+
+      chart_data_label.value = '';
+      chart_data_value.value = '';
     } else {
       notification("Please enter data value.");
     }
@@ -609,4 +619,8 @@ function save_chart(PID) {
   } else {
     notification("Please enter chart name before saving it.");
   }
+}
+
+function delete_data(Clabel, Cvalue) {
+  
 }

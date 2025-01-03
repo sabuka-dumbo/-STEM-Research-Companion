@@ -1179,6 +1179,7 @@
     display: grid;
     grid-template-columns: 73% 5% 10% 2% 10%;
     grid-template-rows: 1;
+    margin-bottom: 5px;
 }
 
 .cc-saved-label {
