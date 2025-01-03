@@ -102,7 +102,6 @@ const notify_icon = document.getElementById("notify_icon");
 
 function notification(text) {
     notify_text.innerText = text;
-
     notify_div.style.display = "block";
     notify_div.style.animation = "notify_div_animation_open 1s ease";
 
@@ -115,7 +114,6 @@ function notification(text) {
             notify_div.addEventListener("animationend", function handleCloseAnimation() {
                 notify_div.style.animation = '';
                 notify_div.style.display = 'none';
-
                 notify_div.removeEventListener("animationend", handleCloseAnimation);
             });
         }, 3500);
@@ -131,10 +129,10 @@ notify_icon.addEventListener("click", function() {
     notify_div.addEventListener("animationend", function handleCloseAnimation() {
         notify_div.style.animation = '';
         notify_div.style.display = 'none';
-
         notify_div.removeEventListener("animationend", handleCloseAnimation);
     });
 });
+
 
 
 let diagram = null;
