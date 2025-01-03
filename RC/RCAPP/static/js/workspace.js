@@ -637,6 +637,7 @@ function delete_data(Clabel, Cvalue) {
   if (divElement) {
     divElement.remove();
 
+    chart.destroy();
     chart = new Chart(ctx, {
       type: current_type,
       data: {
