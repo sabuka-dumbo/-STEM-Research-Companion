@@ -622,5 +622,4 @@ function save_chart(PID) {
 }
 
 function delete_data(Clabel, Cvalue) {
-  
 }
