@@ -580,7 +580,8 @@ function chart_data_save() {
 
 const chart_name_input = document.getElementById("chart_name");
 
-function save_chart() {
+function save_chart(PID) {
+  console.log(PID)
   if (chart_name_input.value !== '') {
     if (chart_data.length > 0) {
       var chartConfigJson = JSON.stringify(chart.config);
