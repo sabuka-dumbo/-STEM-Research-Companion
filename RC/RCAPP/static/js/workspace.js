@@ -636,5 +636,32 @@ function delete_data(Clabel, Cvalue) {
   console.log(divId)
   if (divElement) {
     divElement.remove();
+
+    chart = new Chart(ctx, {
+      type: current_type,
+      data: {
+        labels: chart_data.map(data => data.Label),
+        datasets: [{
+          label: chart_data.map(data => data.Label),
+          data: chart_data.map(data => Number(data.Value)), 
+          backgroundColor: current_back_color,
+          borderColor: current_border_color,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+              display: false,
+          }
+        },
+
+        scales: {
+          y: {
+              beginAtZero: true
+          }
+        }
+      }
+    });
   }
 }
